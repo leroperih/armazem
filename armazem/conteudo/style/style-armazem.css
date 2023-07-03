@@ -30,27 +30,19 @@ body {
 
 
 
-
+/*
+  background + background-size
+  color > image > position > repeat > [size] > attachment
+*/
 
 
   /* cabeçario */
 header {
 
-  background-image: linear-gradient( 180deg, #18163b 28% , #381d45 56% , #ac5c9e 98.2% , #000000 ) ;
+  background: #151515 url("../background-madrugada.jpeg") center center no-repeat fixed;
+  background-size: cover;
   position: relative;
-  height: 34em;
-}
-
-
-  /* cabeçario > img */
-header > img {
-
-  transform: rotate( 8deg );
-  
-  position: absolute;
-  top: 6%;
-  left: 0.8%;
-  width: 24em;
+  height: 32em;
 }
 
 
@@ -61,14 +53,15 @@ header > h1 {
 
   font-family: var(--fontan);
   font-weight: lighter;
-  font-size: 5.5em;
+  font-size: 5em;
   white-space: nowrap;
 
+
   position: absolute;
-  color: #292760;
-  text-shadow: 0em 0em .1em #fd75ff20;
-  left: 60%;
-  top: 64%;
+  color: #421818;
+  text-shadow: 0em 0em 0.16em #0e0e0e;
+  left: 75%;
+  top: 72%;
 }
 
 
@@ -89,13 +82,29 @@ header > nav {
   width: 100%;
 } header > nav > div > a {
 
+  transition-duration: 0.18s;
+
   background-color: #151515;
 
-  box-shadow: inset 0em 0em 0.32em #faa3fc10;
+  box-shadow: inset 0em 0em 0.32em #fca3a310;
   border-radius: 0.16em;
-  color: #574b9a;
+  color: #640000;
   text-decoration: none;  
   font-size: 1.25em;
   padding: 0.32em 0.6em;
   margin-right: 1.2em;
+} header > nav > div > a:hover {
+  background-color: #4e4e4e;
+  text-shadow: 0em 0em 0.35em #000000;
+}
+
+
+
+
+
+
+/* main */
+main {
+margin-top: 1.5em;
+height: 100em;
 }
