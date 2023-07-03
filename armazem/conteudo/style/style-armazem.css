@@ -3,6 +3,7 @@
 
 
 @font-face {
+
   font-family: "Angel";
   src: url("Angel.TTF");
 }
@@ -10,6 +11,14 @@
 
 
 :root {
+
+  --color_00: transparent;
+  --color_01-0: #000000;
+
+
+
+  --back-ma: url("../background-madrugada.jpeg");
+
   
 
   --fontan: "Angel", sans-serif;
@@ -39,17 +48,18 @@ body {
   /* cabeçario */
 header {
 
-  background: #151515 url("../background-madrugada.jpeg") center center no-repeat fixed;
+  background: #151515 var(--back-ma) center center no-repeat fixed;
   background-size: cover;
   position: relative;
   height: 32em;
+  box-shadow: inset 0em -0.1em 0.75em #050505;
 }
 
 
   /* cabeçario > título */
 header > h1 {
 
-  transform: translate( -50% , -50% );
+  transform: translate( -100% , -100% );
 
   font-family: var(--fontan);
   font-weight: lighter;
@@ -58,44 +68,44 @@ header > h1 {
 
 
   position: absolute;
-  color: #421818;
-  text-shadow: 0em 0em 0.16em #0e0e0e;
-  left: 75%;
-  top: 72%;
+  color: #320000;
+  text-shadow: 0em 0em 0.1em #2828284e;
+  left: 95%;
+  top: 86%;
 }
 
 
   /* cabeçario > links */
 header > nav {
   
-  background-image: linear-gradient( 75deg, transparent 12% , #000000 12.1% );
+  background-image: linear-gradient( 75deg, transparent 12% , var(--color_01-0) 12.1% );
   position: absolute;
 
   width: 100%;
   height: 3.5em;
   top: 92.5%;
-} header > nav > div {
 
   padding: 1em 0em;
   text-align: right;
   height: auto;  
   width: 100%;
-} header > nav > div > a {
+} header > nav > a {
 
   transition-duration: 0.18s;
 
-  background-color: #151515;
-
-  box-shadow: inset 0em 0em 0.32em #fca3a310;
+  background-color: #080808;
+  box-shadow: inset 0em 0em 0.32em #2e0e0e3e;
   border-radius: 0.16em;
-  color: #640000;
+  color: #6e0000;
   text-decoration: none;  
   font-size: 1.25em;
   padding: 0.32em 0.6em;
   margin-right: 1.2em;
-} header > nav > div > a:hover {
-  background-color: #4e4e4e;
-  text-shadow: 0em 0em 0.35em #000000;
+} header > nav > a:hover {
+
+  color: #840000;
+  background-color: #151515;
+  text-shadow: 0em 0em 0.35em var(--color_01-0);
 }
 
 
@@ -105,6 +115,7 @@ header > nav {
 
 /* main */
 main {
+
 margin-top: 1.5em;
 height: 100em;
 }
