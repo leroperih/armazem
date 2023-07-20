@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+
+
+
+
+
+
+div#header-container-social {
+margin: 0em calc( 2.5em + 1.5vw);
+align-items: center;
+}
+
+
+
+
+
+
+div#header-container-links {
+
+  display: flex;
+  align-items: center;
+} div#header-container-social {
+  flex-direction: row;
+  justify-content: space-between;
+} nav#links-sociais {
+  display: inline;
+} nav#links-sociais > ul {
+  height: 38px;
+  list-style-type: none;
+  display: flex; 
+  gap: 3.2vw;
+  align-items: center;
+  width: auto;
+  justify-content: center;
+  background-color: #00000085;
+  border-radius: 24px;
+  padding: 0em 3.2vw;
+}
+
+
+
+
+div#header-menu {
+  display: none;
+}
+
+
+
+div#header-container-menu {
+  align-items: center;
+}
+div#header-waifu { /* Waifu Perfil */
+
+  height: calc( 48px + 1vw );
+  width: calc( 48px + 1vw );
+}
+
+
+
+
+
