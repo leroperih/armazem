@@ -172,7 +172,7 @@ main {
  background-color: #050505;
 } main > section * img {
   display: inline-block;
-  width: 0.6em; height: 0.6em;
+  width: 0.7em; height: 0.7em;
 } span#font {
  font-family: Arial, Helvetica, sans-serif;
 }

@@ -36,7 +36,7 @@ div#container-menu {  /* Menu Burger */
 
 div#header-container-links {
 
-  min-width: 42%;
+  min-width: 38%;
   max-width: calc(100% - 48px);
   display: flex;
 } nav#links-sociais > ul {
