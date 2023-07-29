@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* TELAS PEQUENAS */
+
+
+
+* {  /*  CSS Padrão Geral */
+  padding: 0em; margin: 0em;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+} body, html {
+  width: 100vw; height: 100vh;
+  margin: auto; background-color: #050505;
+  overflow-x: hidden;
+} body {
+  perspective: 10px;
+  position: relative;
+} body::-webkit-scrollbar {  /* Scroll Geral */
+  width: 10px; background-color: #00000000;
+} body::-webkit-scrollbar-thumb {  /* Mover Scroll */
+  background-color: #050505; border: 1px solid #000000;
+  border-radius: 4px;
+} body::-webkit-scrollbar-track {  /* Fundo Scroll */
+  width: 4px; background-color: #050505;
+  border-radius: 4px; margin: 6px 0em;
+} body::-webkit-scrollbar-track:hover {
+  background-color: #140404;
+}
+
+
+
+
+
+
+header {  /* Header Background Padrão */
+
+ width: 100%; height: calc(100vh - 4.5em);
+ position: relative;
+ transform-style: preserve-3d;
+} div#bg-night {  /* Container Fundo Night */
+ width: 100%; height: 100%;
+ transform-style: preserve-3d;
+ position: absolute;
+ left: 50%; top: 50%;
+ transform: translate( -50% , -50% );
+} img#bg-night {  /* Header Fundo Shadow */
+ width: 100%; height: 100%;
+ position: absolute;
+ left: 50%; top: calc(50% - 2.25em);
+ transform: translate( -50% , -50% ) translateZ(-8px) scale(2);
+ object-fit: cover;
+} div#bg-shadow {  /* Header Efeito Shadow */
+ width: 100%; height: 100%;
+ box-shadow: inset 0em 0em 5em #050505;
+ background-image:
+ linear-gradient(
+ 180deg ,
+ #020202 00% ,
+ #05050500 20% ,
+ #0505057f 65% ,
+ #050505bc 75% ,
+ #050505d5 80% ,
+ #050505e5 85% ,
+ #050505f5 90% ,
+ #050505 100% );
+ }
+
+
+
+
+
+
+section#header-social {  /* Container Social */
+
+ width: 100%; height: 1000em;
+ position: absolute;
+ z-index: +1;
+} div#container-social-items {
+ top: 1vw;
+ height: 48px;
+ position: sticky;
+ z-index: +1;
+} div#header-container-links {
+ height: 48px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ border-radius: 24px;
+} div#header-container-menwai {
+ height: 100%; display: flex;
+ justify-content: space-between;
+}
+
+
+
+
+
+
+div#container-menu {  /* Menu Burger */
+
+  width: 48px; height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} div#ico-burger {
+  width: 64%; height: 64%;
+  display: flex;
+  flex-direction: column;
+  gap: 20%;
+} div#ico-burger > div {
+  width: 100%; height: 20%;
+  background-color: #140000;
+  border-radius: 3px;
+}
+
+
+div#container-waifu {  /* Waifu Perfil */
+
+  width: 48px; height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #000000d0;
+  box-shadow: 0em 0em 8px #000000d0;
+} div#container-waifu > a {
+  width: 80%; height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.32s;
+} img#ico-img-waifu {
+  width: 100%; height: 100%;
+} div#container-waifu > a:hover {
+  width: 95%; height: 95%;
+}
+
+
+div#header-container-links { display: none; } /* Fazer */
+div#header-container-links * { color: #541414; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+main {
+ height: 1000em;
+ transform-style: preserve-3d;
+} main > section > * {
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: bolder;
+ color: #b0b0b0;
+ padding-left: 2.5vw;
+} main > section > p {
+ font-size: 0.8em;
+} main > section > h4 {
+ padding: 0.5em 0em;
+} main > section {
+ padding: 1em 2.5vw;
+ height: 200vh;
+ background-color: #050505;
+} main > section * img {
+  display: inline-block;
+  width: 0.6em; height: 0.6em;
+} span#font {
+ font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+@media screen and (orientation: landscape) {
+  
+}
