@@ -6,7 +6,6 @@
 
 * {  /*  CSS Padrão Geral */
   padding: 0em; margin: 0em;
-  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 } body, html {
@@ -38,15 +37,19 @@ header {  /* Header Background Padrão */
  width: 100%; height: calc(100vh - 4.5em);
  position: relative;
  transform-style: preserve-3d;
+ transform: translateZ(0px);
 } div#bg-night {  /* Container Fundo Night */
  width: 100%; height: 100%;
- transform-style: preserve-3d;
  position: absolute;
+ transform-style: preserve-3d;
+ transform: translateZ(0px);
  left: 50%; top: 50%;
  transform: translate( -50% , -50% );
 } img#bg-night {  /* Header Fundo Shadow */
  width: 100%; height: 100%;
  position: absolute;
+ transform-style: preserve-3d;
+ transform: translateZ(0px);
  left: 50%; top: calc(50% - 2.25em);
  transform: translate( -50% , -50% ) translateZ(-8px) scale(2);
  object-fit: cover;
@@ -73,13 +76,20 @@ header {  /* Header Background Padrão */
 
 section#header-social {  /* Container Social */
 
+ width: 100%; height: 100%;
+ position: relative;
+ transform-style: preserve-3d;
+ z-index: +2;
+} section#header-social > div {
  width: 100%; height: 1000em;
  position: absolute;
+ transform-style: preserve-3d;
  z-index: +1;
 } div#container-social-items {
  top: 1vw;
  height: 48px;
  position: sticky;
+ transform-style: preserve-3d;
  z-index: +1;
 } div#header-container-links {
  height: 48px;
@@ -155,8 +165,11 @@ div#header-container-links * { color: #541414; }
 
 
 main {
+ width: 100%;
  height: 1000em;
+ position: absolute;
  transform-style: preserve-3d;
+ transform: translateZ(0px);
 } main > section > * {
  font-family: 'Courier New', Courier, monospace;
  font-weight: bolder;
@@ -170,6 +183,7 @@ main {
  padding: 1em 2.5vw;
  height: 200vh;
  background-color: #050505;
+ transform-style: preserve-3d;
 } main > section * img {
   display: inline-block;
   width: 0.7em; height: 0.7em;
