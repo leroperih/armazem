@@ -16,15 +16,15 @@
   perspective: 10px;
   position: relative;
 } body::-webkit-scrollbar {  /* Scroll Geral */
-  width: 10px; background-color: #00000000;
+  width: 8px; background-color: #00000000;
 } body::-webkit-scrollbar-thumb {  /* Mover Scroll */
   background-color: #050505; border: 1px solid #000000;
   border-radius: 4px;
 } body::-webkit-scrollbar-track {  /* Fundo Scroll */
   width: 4px; background-color: #050505;
-  border-radius: 4px; margin: 6px 0em;
+  border-radius: 4px; margin: 10px 0em;
 } body::-webkit-scrollbar-track:hover {
-  background-color: #140404;
+  background-color: #220606;
 }
 
 
@@ -37,21 +37,13 @@ header {  /* Header Background Padrão */
  width: 100%; height: calc(100vh - 4.5em);
  position: relative;
  transform-style: preserve-3d;
- transform: translateZ(0px);
-} div#bg-night {  /* Container Fundo Night */
- width: 100%; height: 100%;
- position: absolute;
- transform-style: preserve-3d;
- transform: translateZ(0px);
- left: 50%; top: 50%;
- transform: translate( -50% , -50% );
+ z-index: -10;
 } img#bg-night {  /* Header Fundo Shadow */
  width: 100%; height: 100%;
  position: absolute;
  transform-style: preserve-3d;
- transform: translateZ(0px);
  left: 50%; top: calc(50% - 2.25em);
- transform: translate( -50% , -50% ) translateZ(-8px) scale(2);
+ transform: translate( -50% , -50% ) translateZ(-10px) scale(2.00001);
  object-fit: cover;
 } div#bg-shadow {  /* Header Efeito Shadow */
  width: 100%; height: 100%;
@@ -59,13 +51,14 @@ header {  /* Header Background Padrão */
  background-image:
  linear-gradient(
  180deg ,
- #020202 00% ,
- #05050500 20% ,
- #0505057f 65% ,
- #050505bc 75% ,
- #050505d5 80% ,
- #050505e5 85% ,
- #050505f5 90% ,
+ #000000 00% ,
+ #00000000 20% ,
+ #0000007f 65% ,
+ #000000bc 75% ,
+ #010101d5 80% ,
+ #020202e5 85% ,
+ #030303f5 90% ,
+ #040404f5 95% ,
  #050505 100% );
  }
 
@@ -76,21 +69,15 @@ header {  /* Header Background Padrão */
 
 section#header-social {  /* Container Social */
 
- width: 100%; height: 100%;
- position: relative;
- transform-style: preserve-3d;
- z-index: +2;
-} section#header-social > div {
- width: 100%; height: 1000em;
- position: absolute;
- transform-style: preserve-3d;
- z-index: +1;
-} div#container-social-items {
- top: 1vw;
- height: 48px;
+ width: 100%; height: 48px;
  position: sticky;
  transform-style: preserve-3d;
- z-index: +1;
+ top: 1vw;
+ z-index: +10;
+ display: unset;
+} div#container-social-items {
+ height: 48px;
+ transform-style: preserve-3d;
 } div#header-container-links {
  height: 48px;
  display: flex;
@@ -165,32 +152,27 @@ div#header-container-links * { color: #541414; }
 
 
 main {
- width: 100%;
- height: 1000em;
+ width: 100vw;
+ box-sizing: border-box;
+ padding: 1em 2.5vw;
+ padding-top: calc(48px + 2em);
+ height: 200vh;
+ background-color: #050505;
  position: absolute;
- transform-style: preserve-3d;
- transform: translateZ(0px);
-} main > section > * {
+ top: calc(100vh - 4.5em);
+} main * {
  font-family: 'Courier New', Courier, monospace;
  font-weight: bolder;
  color: #b0b0b0;
- padding-left: 2.5vw;
-} main > section > p {
+} main p {
  font-size: 0.8em;
-} main > section > h4 {
+ padding-left: 1.5vw;
+} main h4 {
  padding: 0.5em 0em;
-} main > section {
- padding: 1em 2.5vw;
- height: 200vh;
- background-color: #050505;
- transform-style: preserve-3d;
-} main > section * img {
+} main * img {
   display: inline-block;
   width: 0.7em; height: 0.7em;
-} span#font {
- font-family: Arial, Helvetica, sans-serif;
 }
-
 
 
 
