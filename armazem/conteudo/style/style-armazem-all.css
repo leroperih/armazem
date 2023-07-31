@@ -155,7 +155,7 @@ div#header-container-links * { color: #541414; }
 main {
  width: 100vw;
  box-sizing: border-box;
- padding: 24px 2.5vw;
+ padding: 1em 24px;
  padding-top: calc(48px + 2em);
  height: 200vh;
  background-color: #050505;
