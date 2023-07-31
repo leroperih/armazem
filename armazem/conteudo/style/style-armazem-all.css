@@ -159,6 +159,7 @@ main {
  height: 200vh;
  background-color: #050505;
  position: absolute;
+ z-index: +1;
  top: calc(100vh - 4.5em);
 } main * {
  font-family: 'Courier New', Courier, monospace;
