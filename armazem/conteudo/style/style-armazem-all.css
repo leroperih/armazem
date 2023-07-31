@@ -165,7 +165,9 @@ main {
  top: calc(100vh - 4.5em);
 } main > section {
  width: 100%; height: 100%;
-
+ transform-style: preserve-3d;
+ z-index: +5;
+ background-color: #050505;
 } main * {
  font-family: 'Courier New', Courier, monospace;
  font-weight: bolder;
