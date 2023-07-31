@@ -154,9 +154,6 @@ div#header-container-links * { color: #541414; }
 
 main {
  width: 100vw;
- box-sizing: border-box;
- padding: 1em 24px;
- padding-top: calc(48px + 2em);
  height: 200vh;
  position: absolute;
  background-color: #050505;
@@ -166,6 +163,8 @@ main {
 } main > section {
  width: 100%; height: 100%;
  box-sizing: border-box;
+ padding: 1em 24px;
+ padding-top: calc(48px + 2em);
  position: absolute;
  transform-style: preserve-3d;
  z-index: +5;
