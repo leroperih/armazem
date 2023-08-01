@@ -60,11 +60,13 @@ div#header-container-links {
   padding: 0.5vw 0vw;
   margin:  0em 1vw;
 } ul > li > a:hover {
- border-left: 1px solid #2e0f0fe8;
- border-right: 1px solid #2e0f0fe8;
+ border-left: 1.5px solid #2e0f0fe8;
+ border-right: 1.5px solid #2e0f0fe8;
  border-radius: 10%;
  padding: 0.5vw 1vw;
  margin: 0em;
+ text-shadow: 0em 0em 0.25em #800000b0;
+ box-shadow: inset 0em 0em 1em #80000009;
 }
 
 
@@ -79,16 +81,3 @@ div#notes {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-
-
-
-
-:root { /* Altura e Posição do Título LA */
-  --tamanho: 42vh;
-  --posição: 48vh;
-} div#lesro {
-  width: var(--tamanho);
-} div#container-titu-lesro {
-  height: var(--tamanho);
-  top: var(--posição);
-}

@@ -4,13 +4,18 @@
 
 
 
+:root {
+  --barso-height: calc(48px + 1vw);
+}
+
+
 * {  /*  CSS Padrão Geral */
   padding: 0em; margin: 0em;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 } body, html {
   width: 100vw; height: 100vh;
-  margin: auto; background-color: #050505;
+  background-color: #050505;
   overflow-x: hidden;
 } body {
   perspective: 10px;
@@ -24,7 +29,7 @@
   width: 4px; background-color: #050505;
   border-radius: 4px; margin: 10px 0em;
 } body::-webkit-scrollbar-track:hover {
-  background-color: #220606;
+  background-color: #200000;
 }
 
 
@@ -32,35 +37,36 @@
 
 
 
-header {  /* Header Background Padrão */
 
- width: 100%; height: calc(100vh - 7.5em);
- position: relative;
- transform-style: preserve-3d;
- z-index: -10;
-} img#bg-night {  /* Header Fundo Shadow */
- width: 100%; height: 100%;
- position: absolute;
- transform-style: preserve-3d;
- left: 50%; top: calc(50% - 2.25em);
- transform: translate( -50% , -50% ) translateZ(-10px) scale(2.00001);
- object-fit: cover;
- z-index: -10;
-} div#bg-shadow {  /* Header Efeito Shadow */
- width: 100%; height: 100%;
- box-shadow: inset 0em 0em 5em #050505;
- background-image:
- linear-gradient(
- 180deg ,
- #000000 00% ,
- #00000000 20% ,
- #0000007f 65% ,
- #000000bc 75% ,
- #010101d5 80% ,
- #020202e5 85% ,
- #030303f5 90% ,
- #040404f5 95% ,
- #050505 100% );
+
+
+
+
+
+
+
+
+
+header {  /* Header, Main e Footer */
+
+  width: 100%; height: calc(100vh - 10em);
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -10;
+} main {
+  width: 100vw; height: 200em;
+  position: relative;
+  top: calc(0em - var(--barso-height));
+  transform-style: preserve-3d;
+  z-index: +5;
+  border-top: 48px solid #050505;
+  background-color: #050505;
+} footer {
+  width: 100%;
+  padding: 1em 24px;
+  padding-top: calc(48px + 2em);
+  box-sizing: border-box;
+  background-color: #050505;
  }
 
 
@@ -68,7 +74,84 @@ header {  /* Header Background Padrão */
 
 
 
-section#header-social {  /* Container Social */
+
+
+
+
+
+
+
+
+img#bg-night {  /* Header Fundo Shadow */
+  width: 100%; height: 100%;
+  position: absolute;
+  left: 50%; top: calc(50% - 2.25em);
+  transform: translate( -50% , -50% ) translateZ(-10px) scale(2.00001);
+  object-fit: cover;
+  z-index: -10;
+} div#bg-shadow {  /* Header Efeito Shadow */
+  width: 100%; height: 100%;
+  box-shadow: inset 0em 0em 6.4em #050505;
+  background-image:
+  linear-gradient(
+  180deg ,
+  #000000 00% ,
+  #00000000 20% ,
+  #0000007f 65% ,
+  #000000bc 75% ,
+  #010101d5 80% ,
+  #020202e5 85% ,
+  #030303f5 90% ,
+  #040404f5 95% ,
+  #050505 100% );
+}
+
+
+
+
+
+
+section#header-titulo {  /* Zona LA */
+  
+  width: 100%; height: 100%;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform-style: preserve-3d;
+  transform: translate(-50% , -50%);
+} div#container-titu-lesro {
+  width: 100%; height: 16vh;
+  position: absolute;
+  top: 20vh;
+} div#titu-lesro {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+} div#lesro {
+  width: 32vh; height: 100%;
+  position: relative;
+} img#titu-la-img {
+  width: 100%; height: 100%;
+  position: absolute;
+  transform: translateZ(-10px) scale(1);
+  object-fit: fill;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section#barra-social {  /* Container Social */
 
  width: 100%; height: 48px;
  position: sticky;
@@ -137,7 +220,7 @@ div#container-waifu {  /* Waifu Perfil */
 
 
 div#header-container-links { display: none; } /* Fazer */
-div#header-container-links * { color: #541414; }
+div#header-container-links * { color: #800000; }
 
 
 
@@ -152,36 +235,30 @@ div#header-container-links * { color: #541414; }
 
 
 
-main {
- width: 100vw;
- height: 200vh;
- position: absolute;
- background-color: #050505;
- transform-style: preserve-3d;
- z-index: +5;
- top: calc(100vh - 7.5em);
-} main > section {
- width: 100%; height: 100%;
- box-sizing: border-box;
- padding: 1em 24px;
- padding-top: calc(48px + 2em);
- position: absolute;
- transform-style: preserve-3d;
- z-index: +5;
- background-color: #050505;
-} main * {
+
+
+
+
+
+
+footer * {
  font-family: 'Courier New', Courier, monospace;
  font-weight: bolder;
  color: #b0b0b0;
-} main p {
+} footer p {
  font-size: 0.8em;
  padding-left: 1.5vw;
-} main h4 {
+} footer h4 {
  padding: 0.5em 0em;
-} main * img {
+} footer * img {
   display: inline-block;
   width: 0.7em; height: 0.7em;
 }
+
+
+
+
+
 
 
 
