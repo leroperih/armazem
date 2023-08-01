@@ -6,6 +6,8 @@
 
 :root {
   --barso-height: calc(48px + 1vw);
+
+  --red-padrao: #800000;
 }
 
 
@@ -49,7 +51,7 @@
 
 header {  /* Header, Main e Footer */
 
-  width: 100%; height: calc(100vh - 10em);
+  width: 100%; height: calc(100vh - 6.4em);
   position: relative;
   transform-style: preserve-3d;
   z-index: -10;
@@ -59,7 +61,7 @@ header {  /* Header, Main e Footer */
   top: calc(0em - var(--barso-height));
   transform-style: preserve-3d;
   z-index: +5;
-  border-top: 48px solid #050505;
+  padding-top: var(--barso-height);
   background-color: #050505;
 } footer {
   width: 100%;
@@ -188,10 +190,11 @@ div#container-menu {  /* Menu Burger */
   width: 64%; height: 64%;
   display: flex;
   flex-direction: column;
-  gap: 20%;
+  justify-content: center;
+  gap: 30%;
 } div#ico-burger > div {
-  width: 100%; height: 20%;
-  background-color: #140000;
+  width: 100%; height: 10%;
+  background-color: var(--red-padrao);
   border-radius: 3px;
 }
 
@@ -220,7 +223,7 @@ div#container-waifu {  /* Waifu Perfil */
 
 
 div#header-container-links { display: none; } /* Fazer */
-div#header-container-links * { color: #800000; }
+div#header-container-links * { color: var(--red-padrao); }
 
 
 
