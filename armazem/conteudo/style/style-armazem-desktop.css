@@ -73,6 +73,20 @@ div#header-container-links {
 
 
 
+
+
+
+
+
+
+main {
+  padding-left: calc( 1.5em + 1.5vw);
+  padding-right: calc( 1.5em + 1.5vw);
+}
+
+
+
+
 div#notes {
   border-top: 1px solid #f5f5f5;
   padding: 1em 0em;
@@ -80,4 +94,3 @@ div#notes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
