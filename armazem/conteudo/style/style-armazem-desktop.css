@@ -59,14 +59,14 @@ div#header-container-links {
   transition-duration: 0.25s;
   padding: 0.5vw 0vw;
   margin:  0em 1vw;
+  font-size: 1.1em;
 } ul > li > a:hover {
- border-left: 1.5px solid #2e0f0fe8;
- border-right: 1.5px solid #2e0f0fe8;
+ border-left: 1.5px solid #880808e8;
+ border-right: 1.5px solid #880808e8;
  border-radius: 10%;
  padding: 0.5vw 1vw;
  margin: 0em;
- text-shadow: 0em 0em 0.25em #800000b0;
- box-shadow: inset 0em 0em 1em #80000009;
+ text-shadow: 0em 0em 0.35em #880808e8;
 }
 
 
@@ -109,6 +109,26 @@ section#art-study > div#txt > div#linha {
 
 
 
+
+
+
+
+
+
+
+
+section#html-css-study  {
+  flex-direction: row;
+} section#html-css-study > * {
+  height: 16em;
+} section#art-study > * {
+  border-radius: 1em;
+} section#art-study > div > div {
+  width: 18em; height: 100%; right: 0em;
+} section#art-study > div > div > a {
+  width: 10em; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 

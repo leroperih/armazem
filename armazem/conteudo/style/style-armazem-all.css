@@ -8,7 +8,7 @@
 :root {
   --barso-height: calc(48px + 1vw);
 
-  --red-padrao: #800000;
+  --red-padrao: #a00000;
 
   --fontean: 'Amatic SC', cursive;
 }
@@ -224,7 +224,7 @@ div#container-waifu {  /* Waifu Perfil */
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-duration: 0.32s;
+  transition-duration: 0.1s;
 } img#ico-img-waifu {
   width: 100%; height: 100%;
 } div#container-waifu > a:hover {
@@ -242,99 +242,128 @@ div#header-container-links * { color: var(--red-padrao); }
 
 
 
-
-:root {
-
-  --size-link-art: 2em;
-} section#art-study {  /* Section de Artes */
-
-  width: 100%; height: 10em;
-  margin-top: var(--size-link-art);
-  border-radius: 0.25em var(--size-link-art) 0.5em var(--size-link-art);
-  border: 1px solid #161616;
-  overflow: hidden;
-  box-shadow: 0em 0.5em 1em #00000080;
-  position: relative;
+main > * {
+  max-width: 70em;
+  margin: auto;
+} main > h2 {
+  margin-top: 1em;
+  font-size: 2em;
+  color: #808080;
+  font-family: var(--fontean);
 }
 
 
-section#art-study > div#txt {  /* Conteudo Txt */
 
-  width: 100%; height: 100%;
-  background-image:
-  linear-gradient(
-   90deg,
-   #000000 00%,
-   #00000080 calc(00% + 5em),
-   #00000028 calc(00% + 10em),
-   #00000000 );
-  box-shadow: inset -1em 0.5em 2em #000000;
+
+
+
+
+
+section.conteudo { /* Section de Conteudo */
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  padding: 0.75em; gap: 0.5em;
+  flex-direction: column;
+} section.conteudo > * {
+  border: 1.5px solid #484848;
+  width: 100%; height: 8em;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  box-shadow: inset 0em 0em 2em #00000080;
+} section.conteudo > div > div {
+  width: 100%; height: 4em;
   position: absolute;
   bottom: 0em;
-} section#art-study > div#txt > * {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-weight: lighter;
-}
-
-section#art-study > div#txt > h2 {  /* H2 */
-  padding: 0.25em 1em;
-  text-shadow: 0em 0em 0.1em #00000080;
-  color: #808080;
-} section#art-study > div#txt > div#linha {
-  width: calc(100% - 1em); height: 1.5px;
-  margin: auto;
-  background: linear-gradient(90deg, #ffffff50 4em, #ffffff00 75% );
-}
-
-section#art-study > div#txt > p {  /* P */
-  width: 9em;
-  font-size: 0.8em;
-  padding-left: 2.5em;
-  padding-right: 100%;
-  padding-top: 0.5em;
-  color: #ffffff50;
-}
-
-section#art-study > div#txt > div#link { /* Link Artes */
-  width: 2em; height: 100%;
+} section.conteudo > div > div > a {
+  padding: 0.5em 1em;
+  border-radius: 3em;
+  font-size: 1.2em;
   position: absolute;
-  right: 0em; bottom: 0em;
-} div#txt > div#link > div {
-  position: absolute;
-  width: 2em; height: 2em;
-  transform: rotate(-90deg);
-  bottom: -1px;
-} div#txt > div#link > div > div {
-  width: 7.75em; height: 2em;
-  border-radius: 0em 2em 0em 0em;
-  box-shadow: 0em 0em 0.25em #000000;
-  background-image: linear-gradient(90deg, #000000d0 , #000000a0 );
-  border: 1px solid #161616;
-} div#txt > div#link > div > div > a {
-  display: block;
-  margin-left: 1em;
-  margin-top: 0.35em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: var(--red-padrao);
-  font-size: 1em;
-  animation: shine 1s infinite;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000b0;
+  box-shadow: 0em 0em 1em #00000080;
+  transition-duration: 1s;
 }
 
 
-section#art-study > div#img {  /* BG-Artes Img */
 
-  width: 100%; height: 100%;
+
+
+
+
+
+
+section#art-study > * {  /* ARTES */
+  height: 12em;
   background-image: url("../bg-artes.png");
-  background-size: cover;
-} @keyframes shine
-
-{ 000% { text-shadow: 0em 0em 0.1em #800000a0;
-} 050% { text-shadow: 0em 0em 0.1em #80000000;
-} 100% { text-shadow: 0em 0em 0.1em #800000a0;
+  border-radius: 3em 3em 0.5em 0.5em;
+} section#art-study > div * {
+  color: #c00000;
+} section#art-study > div > p {
+  width: 9em;
+  font-size: 1em;
+  padding-left: 1.5em;
+  color: #ffffff90;
+} section#art-study > div > div {
+  height: 3em;
+} section#art-study > div > div > a {
+  text-align: center;
+  left: 0em; right: 0em;
+  border-radius: 0.75em;
+  animation: shine 1s infinite;
+} section#art-study > div > div > a:hover {
+  border: 1.5px solid #800000;
+  box-shadow: inset 0em 0em 0.5em #800000b0;
+}  @keyframes shine
+{ 000% { text-shadow: 0em 0em 1em #800000;
+} 050% { text-shadow: 0em 0em 1em #80000000;
+} 100% { text-shadow: 0em 0em 1em #800000;
 } }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section#html-css-study > div:nth-of-type(1) {
+  border-radius: 3em 1.5em 0.25em 3em;
+  background-image: url("../bg-html.jpg");
+} section#html-css-study > div:nth-of-type(1) * {
+  color: #00dada;
+} section#html-css-study > div:nth-of-type(2) {
+  border-radius: 1.5em 3em 0.25em 0.25em;
+  background-image: url("../bg-css.jpg");
+} section#html-css-study > div:nth-of-type(2) * {
+  color: #9000ff;
+} section.conteudo > div > h2 {
+  padding: 1em;
+} section#html-css-study > div > div {
+  height: 6em;
+} section#html-css-study > div > div > a {
+  margin: 0em 1.5em;
+  right: 0em;
+} section#html-css-study > div:nth-last-of-type(1) > div > a:hover {
+  border: 1.5px solid #9000ff;
+  box-shadow: inset 0em 0em 0.5em #9000ffb0;
+} section#html-css-study > div:nth-last-of-type(2) > div > a:hover {
+  border: 1.5px solid #00dada;
+  box-shadow: inset 0em 0em 0.5em #00dadab0;
+}
 
 
 
