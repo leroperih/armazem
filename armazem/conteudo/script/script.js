@@ -1,27 +1,19 @@
 
 
-function sizeWindow() { 
-liso = document.querySelector("div#links-social")
-menu = document.querySelector("div#menu-social")
+function clickMen() {
+nalin = document.querySelector("nav#links-socials")
+contso = document.querySelector("div#container-nav")
 
-    if ( window.innerWidth > '600' ) {
-    liso.style.display = 'block'
+
+    if ( nalin.style.display == 'none' ) {
+    nalin = document.querySelector("nav#links-socials")
+    contso = document.querySelector("div#container-nav")
+    nalin.style.display = 'block'
+    contso.style.backgroundColor = '#050505'
 } else {
-    liso.style.display = 'none'
-}
-}
-
-
-
-function clickMenu() {
-liso = document.querySelector("div#links-social")
-conso = document.querySelector("div#container-social")
-
-    if ( naso.style.display == 'none' ) {
-    liso.style.display = 'block'
-    conso.style.backgroundColor = '#050505'
-} else {
-    liso.style.display = 'none'
-    conso.style.backgroundColor = '#05050500'
+    nalin = document.querySelector("nav#links-socials")
+    contso = document.querySelector("div#container-nav")
+    nalin.style.display = 'none'
+    contso.style.backgroundColor = '#05050500'
 }
 }
