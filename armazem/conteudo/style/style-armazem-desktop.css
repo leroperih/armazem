@@ -34,7 +34,8 @@ div#header-container-links {
   min-width: 40%;
   max-width: calc(100% - 3em);
   display: flex;
-} nav#links-sociais > ul {
+} div#container-nav > nav#links-sociais > ul {
+  position: relative;
   padding: 0em 2vw;
   gap: 1vw;
   height: 3em;
@@ -45,7 +46,11 @@ div#header-container-links {
   background-color: #000000d0;
   box-shadow: 0em 0em 8px #000000d0;
   border-radius: 24px;
-} ul > li {
+  transform: none;
+} div#container-nav > nav#links-sociais > ul > li {
+
+  margin: 0em;
+  box-shadow: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +58,7 @@ div#header-container-links {
   transition-duration: 0.25s;
   padding: 0.5vw 0vw;
   margin:  0em 1vw;
-  font-size: 1.1em;
+
 } ul > li > a:hover {
  border-left: 1.5px solid #880808e8;
  border-right: 1.5px solid #880808e8;
@@ -62,6 +67,21 @@ div#header-container-links {
  margin: 0em;
  text-shadow: 0em 0em 0.35em #880808e8;
 }
+div#container-nav > nav#links-sociais > ul > li > a { font-size: 1em; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
