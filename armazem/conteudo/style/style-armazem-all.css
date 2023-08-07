@@ -116,7 +116,7 @@ header {  /*  Header  ----------------------------------------------------------
   transform: translate(0em , -0.1em);
 } header > h1 > span:nth-of-type(2) {  /* Armazem */
   font-family: var(--font-sua);
-  color: #1e1e1e;
+  color: #484848;
   text-shadow: 0em 0em 0.1em #ffffff0f;
   border: 2px solid #1e1e1e;
   padding: 0em 0.1em;
@@ -372,7 +372,17 @@ section#art-study > div:nth-of-type(2) { /* Link Alternativo */
 
 
 
-div.notes * {
+
+
+footer {  /*  Footer  -----------------------------------------------------------------------------------------------------------------  */
+  background-color: var(--cor-bg-darkgrey-01);
+  width: 100%; min-height: 4em;
+  padding: 1em 24px;
+} footer * {  /* Footer */
+  color: var(--cor-grey-note-01);
+} img#emoji {
+  width: 0.8em; height: 0.8em;
+} div.notes * {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   color: var(--cor-grey-note-01);
@@ -383,25 +393,6 @@ div.notes * {
   margin: 0.5em 0em;
 } div.notes a {
   text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-footer {  /*  Footer  -----------------------------------------------------------------------------------------------------------------  */
-  background-color: var(--cor-bg-dark-01);
-  margin-top: calc(0em - var(--barso-height));
-  width: 100%;
-  padding: 1em 24px;
-} footer * {  /* Footer */
-  color: var(--cor-grey-note-01);
-} img#emoji {
-  width: 0.8em; height: 0.8em;
 }
 
 
