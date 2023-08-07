@@ -1,40 +1,27 @@
 @charset "UTF-8";
 
-/* TELAS DESKTOP */
 
-
-
-
-
-
-div#container-social-items {  /* Container Social */
-
- margin: 0em 5vw;
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: space-between;
- border-radius: 24px;
- background-color: #00000080;
- box-shadow: 0em 0.5em 1.25em #000000c0;
-} div#header-container-menwai {
- align-items: center;
+header > h1 {
+  flex-direction: row;
 }
 
 
-div#container-menu {  /* Menu Burger */
+section#barra-social > div {
+  flex-direction: row-reverse;
+} div#container-linso {
+  display: flex;
+} section#barra-social > div > div > div#container-burge {
   display: none;
 }
-  
-  
-  
 
-div#header-container-links {
+
+
+section#baarraa-social > div > div:nth-of-type(2) {
 
   min-width: 40%;
   max-width: calc(100% - 3em);
   display: flex;
-} div#container-nav > nav#links-sociais > ul {
+} div > nav > ul {
   position: relative;
   padding: 0em 2vw;
   gap: 1vw;
@@ -47,7 +34,7 @@ div#header-container-links {
   box-shadow: 0em 0em 8px #000000d0;
   border-radius: 24px;
   transform: none;
-} div#container-nav > nav#links-sociais > ul > li {
+} div > nav > ul > li {
 
   margin: 0em;
   box-shadow: none;
@@ -67,7 +54,7 @@ div#header-container-links {
  margin: 0em;
  text-shadow: 0em 0em 0.35em #880808e8;
 }
-div#container-nav > nav#links-sociais > ul > li > a { font-size: 1em; }
+div > nav > ul > li > a { font-size: 1em; }
 
 
 
@@ -89,75 +76,8 @@ div#container-nav > nav#links-sociais > ul > li > a { font-size: 1em; }
 
 
 
-
-
-
-
-main {
-  padding-left: 6vw;
-  padding-right: 6vw;
-} main > h2:nth-of-type(1) {
-  margin-top: 1em;
-}main > h2 {
-  border-bottom: 1.5px solid var(--cor-grey-note-02);
-}
-
-
-
-
-section.conteudo {
-  gap: 2em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-section.conteudo  {  /* HTML CSS, Artes & Outros */
-  flex-direction: row;
-} section.conteudo > * {
-  height: 16em;
-}
-
-
-
-section#art-study {  /* ARTES */
-  gap: 0em;
-} section#art-study > * {
-  border-radius: 1em 2.5em;
-} section#art-study > div > div > a {
-  display: none;
-}
-
-
-section#art-study > div:nth-of-type(1) {
-  border-top-right-radius: 0em;
-  border-bottom-right-radius: 0em;
-} section#art-study > div:nth-of-type(2) {
-  display: block;
-  width: 6em;
-  border-top-left-radius: 0em;
-  border-bottom-left-radius: 0em;
-  background: none #000000;
-}
-
-
-
-
-
-
-div.notes {
-  gap: 1px;
-  padding: 1em 0em;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+main > * {
+  width: 85%;
+} main > section > h2 {
+  border-bottom: 2px solid var(--cor-grey-note-02);
 }
