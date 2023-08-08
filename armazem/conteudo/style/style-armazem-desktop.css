@@ -63,8 +63,8 @@ main > * {
   width: 85%;
 } main > section > h2 {
   border-bottom: 2px solid var(--default-color-grey-01);
-} section#html-css-study {
+} section.two {
   flex-direction: row;
-} section#html-css-study > div {
+} section.two > div {
   height: 12em;
 }
