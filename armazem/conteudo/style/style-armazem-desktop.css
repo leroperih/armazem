@@ -8,7 +8,10 @@ header {
 }
 
 
-section#barra-social > div {
+section#barra-social {
+  width: 95%;
+  max-width: 75em;
+} section#barra-social > div {
   flex-direction: row-reverse;
 } div#container-linso {
   display: flex;
@@ -19,15 +22,15 @@ section#barra-social > div {
 
 
 div > nav > ul {
-  padding: 0em 1.5vw;
+  padding: 0em min(2vw , 1em);
   gap: 0.1vw;
   height: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  background-color: var(--cor-bg-dark-01);
-  box-shadow: 0em 0em 8px var(--cor-bg-dark-02);
+  background-color: var(--color-darkest-black-02);
+  box-shadow: 0em 0em 8px var(--color-darkest-black-03);
   border-radius: 1.5em;
 } div > nav > ul > li {
   display: flex;
@@ -36,13 +39,13 @@ div > nav > ul {
 } ul > li > a {  /* Container li Link */
   border-radius: 0.1em / 1em;
   transition-duration: 0.25s;
-  margin: 0em 1.5vw;
+  margin: 0em min(1vw , 0.85em);
 
 } ul > li > a:hover {
  border-left: 0.05em solid var(--default-color-red-01);
  border-right: 0.05em solid var(--default-color-red-01);
  margin: 0em;
- padding: 0.35em 1.5vw;
+ padding: 0.35em min(1vw , 0.85em);
  text-shadow: 0em 0em 0.35em var(--default-color-red-02);
 } div > nav > ul > li > a { font-size: 1em; }
 

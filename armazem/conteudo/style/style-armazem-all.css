@@ -19,32 +19,39 @@
 
 
 
-  --cor-hover-claro: #ffffff0a;
+  --hover-color-01: #ffffff08;
+  --hover-color-02: #ffffff28;
   --default-color-grey-01: #606060;
   --default-color-grey-02: #60606060;
   --default-color-red-01: #f00000;
   --default-color-red-02: #f0000080;
 
-
-  --cor-bg-dark-01: #000000;
-  --cor-bg-dark-02: #000000b0;
-  --cor-bg-darkgrey-01: #050505;
-  --cor-bg-darkgrey-02: #05050580;
+  --color-darkest-black-01: #000000;
+  --color-darkest-black-02: #000000f0;
+  --color-darkest-black-03: #000000c0;
+  --color-dark-black-01: #050505;
+  --color-dark-black-02: #05050580;
+  --color-lighter-white-01: #ffffff;
+  --color-lighter-white-02: #ffffffd0;
+  --color-light-grey-01: #b0b0b0;
+  --color-light-grey-02: #b0b0b080;
+  --color-medium-grey-01: #161616;
+  --color-medium-grey-02: #16161680;
+  --color-dark-grey-01: #2f2f2f;
+  --color-dark-grey-02: #2f2f2f80;
 
   --css-color-study-01: #df80ff;
   --css-color-study-02: #df80ffb0;
   --html-color-study-01: #00dada;
   --html-color-study-02: #00dadab0;
-  --cor-art-study-01: #c00000;
-  --cor-art-study-02: #c00000b0;
-  --cor-grey-note-01: #b0b0b0;
-  --cor-grey-note-02: #7e7e7e;
+  --art-color-study-01: #c00000;
+  --art-color-study-02: #c00000b0;
 
 
 
 
-  --fontean: 'Amatic SC', cursive;
-  --font-sua: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --fonte-animatic: 'Amatic SC', cursive;
+  --font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   --font-angel: "Angel", sans-serif;
 
 }
@@ -65,17 +72,17 @@
 
 
 body::-webkit-scrollbar {  /* Scroll Space */
-  background-color: var(--cor-bg-dark-01); width: 8px;
+  background-color: var(--color-darkest-black-01); width: 0.5em;
 } body::-webkit-scrollbar-track {  /* Fundo Scroll */
-  border-radius: 4px; border: 2px solid var(--cor-bg-dark-01);
-  margin: 10px 0em;
+  border-radius: 0.25em; border: 2px solid var(--color-darkest-black-01);
+  margin: 0.75em 0em;
 } body::-webkit-scrollbar-track:hover {
-  background: #161616;
+  background: var(--color-medium-grey-01);
 } body::-webkit-scrollbar-thumb {  /* Mover Scroll */
-  border: 1px solid var(--cor-bg-dark-01); border-radius: 4px;
-  background-color: #161616;
+  border: 1px solid var(--color-darkest-black-01); border-radius: 0.25em;
+  background-color: var(--color-medium-grey-01);
 } body::-webkit-scrollbar-thumb:hover {
-  background: #2f2f2f;
+  background: var(--color-dark-grey-01);
 }
 
 
@@ -102,9 +109,9 @@ section#barra-social > div > div > div.openBurge {
 
 header {  /*  Header  -----------------------------------------------------------------------------------------------------------------  */
   height: 12em;
-  background: #000000 url("../bg-night.jpg") bottom center no-repeat fixed;
+  background: var(--color-darkest-black-01) url("../bg-night.jpg") bottom center no-repeat fixed;
   background-size: cover;
-  border-bottom: 2px solid #100101;
+  border-bottom: 2px solid #100000;
   position: relative;
   display: flex;
   justify-content: center;
@@ -127,7 +134,7 @@ header {  /*  Header  ----------------------------------------------------------
   text-shadow: 0em 0em 0.05em var(--default-color-red-02);
   transform: translate(0em , -0.06em);
 } header > h1 > span:nth-of-type(2) {  /* Armazem */
-  font-family: var(--font-sua);
+  font-family: var(--font-apple);
   font-weight: 100;
   color: var(--default-color-grey-01);
   text-shadow: 0em 0em 0.1em var(--default-color-grey-02);
@@ -183,10 +190,10 @@ main {  /*  Main  --------------------------------------------------------------
 } main section:nth-of-type(1) {
   max-width: 75em;
 } main > section > h2 {
-  margin: 1.5em 0em 0.5em 0em;
-  color: var(--default-color-grey-01);
+  margin: 1.5em 0em 0.75em 0em;
+  color: var(--color-light-grey-01);
   font-size: 2em;
-  font-family: var(--fontean);
+  font-family: var(--fonte-animatic);
 }
 
 
@@ -208,8 +215,8 @@ section#barra-social {
   display: flex;
   justify-content: space-between;
   border-radius: 1.5em;
-  background-color: var(--cor-bg-dark-02);
-  box-shadow: 0em 0.5em 1.25em #000000c0;
+  background-color: var(--color-darkest-black-03);
+  box-shadow: 0em 0.5em 1.25em var(--color-darkest-black-03);
 } section#barra-social > div > div {  /* divisores */
   display: flex;
 } section#barra-social > div > div > div {  /* conteudo */
@@ -221,22 +228,22 @@ section#barra-social {
   align-items: center;
   border-radius: 50%;
   overflow: hidden;
-  background-color: var(--cor-bg-dark-02);
-  box-shadow: 0em 0em 8px var(--cor-bg-dark-02);
+  background-color: var(--color-darkest-black-03);
+  box-shadow: 0em 0em 8px var(--color-darkest-black-03);
   transition-duration: 0.1s;
-} section#barra-social > div > div > div:nth-of-type(1):hover { /* Hover Opções Sociais */
-  background: var(--cor-hover-claro);
-  box-shadow: 0em 0em 0.25em var(--cor-hover-claro);
-} section#barra-social > div > div > div:nth-of-type(1) > a:hover ,
-section#barra-social > div > div > div:nth-of-type(1) > div:hover {
-  width: 90%; height: 90%;
-} section#barra-social > div > div > div > a ,
-section#barra-social > div > div > div > div {
+} section#barra-social > div > div > div:nth-of-type(1) > a ,
+section#barra-social > div > div > div:nth-of-type(1) > div {
   width: 100%; height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+} section#barra-social > div > div > div:nth-of-type(1):hover { /* Hover Opções Sociais */
+  background: var(--hover-color-01);
+  box-shadow: 0em 0em 0.25em var(--hover-color-01);
+} section#barra-social > div > div > div:nth-of-type(1) > a:hover ,
+section#barra-social > div > div > div:nth-of-type(1) > div:hover {
+  width: 90%; height: 90%;
 }
 
 
@@ -245,7 +252,7 @@ div#container-waifu > a > img {  /* Menu Waifu */
 }
 
 
- div#container-burge > div > div {  /* Menu Burger */
+div#container-burge > div > div {  /* Menu Burger */
   width: 65%; height: 65%;
   display: flex;
   flex-direction: column;
@@ -253,16 +260,9 @@ div#container-waifu > a > img {  /* Menu Waifu */
   align-items: center;
 } div#container-burge > div > div > div {  /* Icone Menu Burger*/
   width: 90%; height: 0.1em;
-  background-color: var(--cor-art-study-01);
+  background-color: var(--default-color-red-01);
   border-radius: 05% / 50%;
 }
-
-
-
-
-
-
-
 
 
 div#container-linso {
@@ -281,26 +281,27 @@ div#container-linso {
 
 
 
-section.conteudo { /* HTML, CSS & ARTES */
-  box-sizing: border-box;
+section.conteudo { /* Conteudo de Estudos */
   display: flex;
-  padding: 0.75em; gap: 1em;
   flex-direction: column;
+  box-sizing: border-box;
+  padding: 0.5em; gap: 1em;
 
 } section.conteudo > * {
-  border: 1px solid var(--cor-grey-note-01);
-  width: 100%; height: 8em;
+  border: 1.5px solid var(--color-light-grey-01);
+  border-radius: 0.25em;
+  width: 100%; height: 9em;
   position: relative;
   overflow: hidden;
   background-size: cover;
-  box-shadow: inset 0em 0em 2em #00000080;
-  transition-duration: 0.1s;
+  box-shadow: inset 0em 0em 2em var(--color-darkest-black-03);
+  transition-duration: 0.075s;
 } section.conteudo > div:hover {
-  box-shadow: inset 0em 0em 2em #80808080;
+  box-shadow: inset 0em 0em 2em var(--hover-color-02);
 } section.conteudo > div > h2 {
-  color: var(--cor-grey-note-01);
+  color: var(--color-light-grey-01);
   padding: 1em;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.25em;
 } section.conteudo > div > div {
   width: 100%; height: 4em;
   position: absolute;
@@ -312,8 +313,8 @@ section.conteudo { /* HTML, CSS & ARTES */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #000000b0;
-  box-shadow: 0em 0em 1em #00000080;
+  background-color: var(--color-darkest-black-03);
+  box-shadow: 0em 0em 1em var(--color-darkest-black-03);
   margin: 0em 1.5em; right: 0em;
 }
 
@@ -321,40 +322,28 @@ section.conteudo { /* HTML, CSS & ARTES */
 
 
 section#art-study > * {  /* ARTES */
-  height: 10em;
   background-image: url("../bg-artes.png");
-  border-radius: 0.25em;
 } section#art-study > div * {
-  color: var(--cor-art-study-01);
+  color: var(--art-color-study-01);
 } section#art-study > div > p {
+  font-family: var(--font-apple);
   width: 9em;
   font-size: 1em;
   padding-left: 1.5em;
-  color: var(--cor-grey-note-01);
+  color: var(--color-lighter-white-02);
 } section#art-study > div > div {
-  width: 8em; height: 100%; right: 0em;
 } section#art-study > div > div > a {
-  margin: 0em;
-  bottom: 0em; right: 0em;
-  padding: calc(0.5em - 1px) 0.25em calc(0.5em - 1px) 0.5em;
-  height: 1em;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 5em;
-  border-radius: 45% calc(0.03em + 1px) calc(0.03em + 1px) 45%;
 } section#art-study > div > div > a:hover {
-  border: 1.5px solid var(--cor-art-study-01);
-  box-shadow: inset 0em 0em 0.5em #000000;
+  
+} section#art-study > div:nth-of-type(2) { /* Link Alternativo */
+  display: none;
 }
 
 
 
 
 
-section#html-css-study > div > div > a {  /* HTML & CSS */
-  margin: 0em 1.5em; right: 0em;
-
-
-} section#html-css-study > div:nth-of-type(1) {  /* HTML */
+section#html-css-study > div:nth-of-type(1) {  /* HTML */
   border-radius: 3em 1.5em 0.25em 1.5em;
   background-image: url("../bg-html.jpg");
 } section#html-css-study > div:nth-of-type(1) * {
@@ -374,10 +363,6 @@ section#html-css-study > div > div > a {  /* HTML & CSS */
   box-shadow: inset 0em 0em 0.5em var(--css-color-study-02);
 }
 
-section#art-study > div:nth-of-type(2) { /* Link Alternativo */
-  display: none;
-}
-
 
 
 
@@ -387,24 +372,21 @@ section#art-study > div:nth-of-type(2) { /* Link Alternativo */
 
 
 footer {  /*  Footer  -----------------------------------------------------------------------------------------------------------------  */
-  background-color: var(--cor-bg-darkgrey-01);
-  width: 100%; min-height: 4em;
-  padding: 1em 24px;
+  background-color: var(--color-dark-black-01);
+  width: 100%; min-height: 6em;
+  padding: 0.75em 1em;
 } footer * {  /* Footer */
-  color: var(--cor-grey-note-01);
+  color: var(--color-light-grey-01);
 } img#emoji {
   width: 0.8em; height: 0.8em;
-} div.notes * {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-  color: var(--cor-grey-note-01);
-} div.notes p {
+} div#notes > * {
+  font-family: var(--font-apple);
+  font-weight: 400;
+} div#notes p {
   font-size: 0.8em;
   padding-left: 1em;
-} div.notes h3 {
+} div#notes h3 {
   margin: 0.5em 0em;
-} div.notes a {
-  text-decoration: underline;
 }
 
 
