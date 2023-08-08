@@ -62,7 +62,7 @@ div > nav > ul {
 main > * {
   width: 85%;
 } main > section > h2 {
-  border-bottom: 2px solid var(--default-color-grey-01);
+  border-bottom: 1.5px solid var(--color-light-grey-02);
 } section.two {
   flex-direction: row;
 } section.two > div {

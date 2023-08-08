@@ -41,11 +41,19 @@
   --color-dark-grey-02: #2f2f2f80;
 
   --css-color-study-01: #df80ff;
-  --css-color-study-02: #df80ffb0;
+  --css-color-study-02: #df80ff80;
   --html-color-study-01: #00dada;
-  --html-color-study-02: #00dadab0;
-  --art-color-study-01: #c00000;
-  --art-color-study-02: #c00000b0;
+  --html-color-study-02: #00dada80;
+  --js-color-study-01: #eede4e;
+  --js-color-study-02: #eede4e80;
+  --design-color-study-01: #19a65b;
+  --design-color-study-02: #19a65bb0;
+  --cpp-color-study-01: #25c5e5;
+  --cpp-color-study-02: #25c5e5b0;
+  --school-color-study-01: #e5ab25;
+  --school-color-study-02: #e5ab25b0;
+  --python-color-study-01: #c2be05;
+  --python-color-study-02: #c2be0580;
 
 
 
@@ -86,9 +94,7 @@ body::-webkit-scrollbar {  /* Scroll Space */
 }
 
 
-section#barra-social > div > div > div.openBurge {
-  display: flex;
-}
+
 
 
 
@@ -270,6 +276,9 @@ div#container-linso {
 } div#container-linso * {
   color: var(--default-color-red-01);
 }
+div#container-linso.openBurge {
+  display: flex;
+}
 
 
 
@@ -311,6 +320,7 @@ section.conteudo { /* Conteudo de Estudos */
   position: absolute;
   bottom: 0em;
 } section.conteudo > div > div > a {
+  color: var(--color-light-grey-01);
   padding: 0.5em 1em;
   border-radius: 1em;
   font-size: 1.2em;
@@ -323,55 +333,132 @@ section.conteudo { /* Conteudo de Estudos */
 }
 
 section.two > div:nth-of-type(1) {
-  border-radius: 3em 1.5em 0.25em 1.5em;
+  border-radius: 2.5em 1em 0.25em 1em;
 } section.two > div:nth-of-type(2) {
-  border-radius: 0.25em 1.5em 3em 1.5em;
+  border-radius: 0.25em 1em 2.5em 1em;
 }
 
 
 
-section.conteudo:nth-of-type(1) > * {  /* ARTES */
-  background-image: url("../bg-artes.png");
-} section.conteudo:nth-of-type(1) > div * {
-  color: var(--art-color-study-01);
+
+
+
+section.conteudo:nth-of-type(1) > * {  /* Backgrounds */
+  background-image: url("../bg-artes.jpg");
+
+} section.conteudo:nth-of-type(2) > * {
+  background-image: url("../bg-design.jpg");
+
+} section.conteudo:nth-of-type(3) > div:nth-of-type(1) {
+  background-image: url("../bg-html.jpg");
+
+} section.conteudo:nth-of-type(3) > div:nth-of-type(2) {
+  background-image: url("../bg-css.jpg");
+
+} section.conteudo:nth-of-type(4) > * {
+  background-image: url("../bg-javascript.jpg");
+
+}  section.conteudo:nth-of-type(6) > * {
+  background-image: url("../bg-python.jpg");
+
+} section.conteudo:nth-of-type(7) > div:nth-of-type(1) {
+  background-image: url("../bg-school.jpg");
+
+} section.conteudo:nth-of-type(7) > div:nth-of-type(2) {
+  background-image: url("../bg-seta.jpg");
+}
+
+
+
+
+
+
+section.conteudo:nth-of-type(1) > div * {  /* ARTES */
+  color: var(--default-color-red-01);
 } section.conteudo:nth-of-type(1) > div > p {
   width: 9em;
   font-size: 1em;
   padding-left: 1.5em;
   color: var(--color-lighter-white-02);
-} section.conteudo:nth-of-type(1) > div:nth-of-type(2) { /* Link Alternativo */
-  display: none;
+} section.conteudo:nth-of-type(1) > div > div > a:hover {
+  border: 1.5px solid var(--default-color-red-02);
+  box-shadow: inset 0em 0em 0.5em var(--default-color-red-02);
+} section.conteudo:nth-of-type(1) > div:nth-of-type(2) { display: none; }
+
+
+
+
+section.conteudo:nth-of-type(2) * {  /* Design */
+  color: var(--design-color-study-01);
+} section.conteudo:nth-of-type(2) > div > div > a:hover {
+  border: 1.5px solid var(--design-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--design-color-study-02);
 }
 
 
 
 
-
-section.conteudo:nth-of-type(3) > div:nth-of-type(1) {  /* HTML */
-  background-image: url("../bg-html.jpg");
-} section.conteudo:nth-of-type(3) > div:nth-of-type(1) * {
+section.conteudo:nth-of-type(3) > div:nth-of-type(1) * {  /* HTML */
   color: var(--html-color-study-01);
 } section.conteudo:nth-of-type(3) > div:nth-of-type(1) > div > a:hover {
-  border: 1.5px solid var(--html-color-study-01);
+  border: 1.5px solid var(--html-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--html-color-study-02);
 
 
-} section.conteudo:nth-of-type(3) > div:nth-of-type(2) {  /* CSS */
-  background-image: url("../bg-css.jpg");
-} section.conteudo:nth-of-type(3) > div:nth-of-type(2) * {
+} section.conteudo:nth-of-type(3) > div:nth-of-type(2) * {  /* CSS */
   color: var(--css-color-study-01);
 } section.conteudo:nth-of-type(3) > div:nth-of-type(2) > div > a:hover {
-  border: 1.5px solid var(--css-color-study-01);
+  border: 1.5px solid var(--css-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--css-color-study-02);
 }
 
 
 
-section.conteudo:nth-of-type(7) > div:nth-of-type(1) {  /* OBRIGAÇÕES */
-  background-image: url("../bg-school.jpg");
-} section.conteudo:nth-of-type(7) > div:nth-of-type(2) {
-  background-image: url("../bg-seta.jpg");
+
+section.conteudo:nth-of-type(4) * {  /* JavaScript */
+  color: var(--js-color-study-01);
+} section.conteudo:nth-of-type(4) > div > div > a:hover {
+  border: 1.5px solid var(--js-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--js-color-study-02);
 }
+
+
+
+
+section.conteudo:nth-of-type(5) * {  /* Python */
+  color: var(--python-color-study-01);
+} section.conteudo:nth-of-type(5) > div > div > a:hover {
+  border: 1.5px solid var(--python-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--python-color-study-02);
+}
+
+
+
+
+section.conteudo:nth-of-type(6) * {  /* C++ */
+  color: var(--cpp-color-study-01);
+} section.conteudo:nth-of-type(6) > div > div > a:hover {
+  border: 1.5px solid var(--cpp-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--cpp-color-study-02);
+}
+
+
+
+
+section.conteudo:nth-last-of-type(1) > div:nth-of-type(1) * {  /* School */
+  color: var(--school-color-study-01);
+} section.conteudo:nth-last-of-type(1) > div:nth-of-type(1) > div > a:hover {
+  border: 1.5px solid var(--school-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--school-color-study-02);
+} section.conteudo:nth-last-of-type(1) > div:nth-of-type(2) * {  /* Seta */
+  color: var(--default-color-red-01);
+} section.conteudo:nth-last-of-type(1) > div:nth-of-type(2) > div > a:hover {
+  border: 1.5px solid var(--default-color-red-02);
+  box-shadow: inset 0em 0em 0.5em var(--default-color-red-02);
+}
+
+
+
 
 
 
@@ -400,16 +487,3 @@ footer {  /*  Footer  ----------------------------------------------------------
 }
 
 
-
-
-
-
-
-
-
-
-
-
-@media screen and (orientation: landscape) {
-  
-}
