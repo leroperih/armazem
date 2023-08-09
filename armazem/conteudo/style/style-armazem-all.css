@@ -324,7 +324,7 @@ section.conteudo { /* Conteudo de Estudos */
   box-sizing: border-box;
   padding: 0.5em; gap: 1em;
 
-} section.conteudo > * {
+} section.conteudo > * {  /* Conteudo */
   border: 1.5px solid var(--color-light-grey-01);
   border-radius: 0.25em;
   width: 100%; height: 9em;
@@ -336,14 +336,17 @@ section.conteudo { /* Conteudo de Estudos */
   transition-duration: 0.075s;
 } section.conteudo > div:hover {
   box-shadow: inset 0em 0em 6em var(--hover-color-02);
-} section.conteudo > div > h2 {
+} section.conteudo > div > h2 {  /* Título */
   font-family: var(--font-apple);
   color: var(--color-light-grey-01);
   padding: 0.75em;
   padding-bottom: 0.25em;
 } section.conteudo > div > p {
   font-family: var(--font-apple);
-} section.conteudo > div > div {
+  font-size: 1em;
+  margin-left: 1.5em;
+  width: 9em;
+} section.conteudo > div > div {  /* Link Acessar */
   width: 100%; height: 4em;
   position: absolute;
   bottom: 0em;
@@ -372,27 +375,30 @@ section.two > div:nth-of-type(1) {
 
 
 section.conteudo:nth-of-type(1) > * {  /* Backgrounds */
-  background-image: url("../bg-artes.jpg");
+  background-image: url("../me_mieruko_circle.png");
 
 } section.conteudo:nth-of-type(2) > * {
+  background-image: url("../bg-artes.jpg");
+
+} section.conteudo:nth-of-type(3) > * {
   background-image: url("../bg-design.jpg");
 
-} section.conteudo:nth-of-type(3) > div:nth-of-type(1) {
+} section.conteudo:nth-of-type(4) > div:nth-of-type(1) {
   background-image: url("../bg-html.jpg");
 
-} section.conteudo:nth-of-type(3) > div:nth-of-type(2) {
+} section.conteudo:nth-of-type(4) > div:nth-of-type(2) {
   background-image: url("../bg-css.jpg");
 
-} section.conteudo:nth-of-type(4) > * {
+} section.conteudo:nth-of-type(5) > * {
   background-image: url("../bg-javascript.jpg");
 
-}  section.conteudo:nth-of-type(6) > * {
-  background-image: url("../bg-python.jpg");
+}  section.conteudo:nth-of-type(7) > * {
+  background-image: url("../bg-cmm.jpg");
 
-} section.conteudo:nth-of-type(7) > div:nth-of-type(1) {
+} section.conteudo:nth-of-type(8) > div:nth-of-type(1) {
   background-image: url("../bg-school.jpg");
 
-} section.conteudo:nth-of-type(7) > div:nth-of-type(2) {
+} section.conteudo:nth-of-type(8) > div:nth-of-type(2) {
   background-image: url("../bg-seta.jpg");
 }
 
@@ -401,24 +407,21 @@ section.conteudo:nth-of-type(1) > * {  /* Backgrounds */
 
 
 
-section.conteudo:nth-of-type(1) > div * {  /* ARTES */
+section.conteudo:nth-of-type(2) > div * {  /* ARTES */
   color: var(--art-color-study-01);
-} section.conteudo:nth-of-type(1) > div > p {
-  width: 9em;
-  font-size: 1em;
-  padding-left: 1.5em;
+} section.conteudo:nth-of-type(2) > div > p {
   color: var(--color-lighter-white-02);
-} section.conteudo:nth-of-type(1) > div > div > a:hover {
+} section.conteudo:nth-of-type(2) > div > div > a:hover {
   border: 1.5px solid var(--art-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--art-color-study-02);
-} section.conteudo:nth-of-type(1) > div:nth-of-type(2) { display: none; }
+} section.conteudo:nth-of-type(2) > div:nth-of-type(2) { display: none; }
 
 
 
 
-section.conteudo:nth-of-type(2) * {  /* Design */
+section.conteudo:nth-of-type(3) * {  /* Design */
   color: var(--design-color-study-01);
-} section.conteudo:nth-of-type(2) > div > div > a:hover {
+} section.conteudo:nth-of-type(3) > div > div > a:hover {
   border: 1.5px solid var(--design-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--design-color-study-02);
 }
@@ -426,16 +429,16 @@ section.conteudo:nth-of-type(2) * {  /* Design */
 
 
 
-section.conteudo:nth-of-type(3) > div:nth-of-type(1) * {  /* HTML */
+section.conteudo:nth-of-type(4) > div:nth-of-type(1) * {  /* HTML */
   color: var(--html-color-study-01);
-} section.conteudo:nth-of-type(3) > div:nth-of-type(1) > div > a:hover {
+} section.conteudo:nth-of-type(4) > div:nth-of-type(1) > div > a:hover {
   border: 1.5px solid var(--html-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--html-color-study-02);
 
 
-} section.conteudo:nth-of-type(3) > div:nth-of-type(2) * {  /* CSS */
+} section.conteudo:nth-of-type(4) > div:nth-of-type(2) * {  /* CSS */
   color: var(--css-color-study-01);
-} section.conteudo:nth-of-type(3) > div:nth-of-type(2) > div > a:hover {
+} section.conteudo:nth-of-type(4) > div:nth-of-type(2) > div > a:hover {
   border: 1.5px solid var(--css-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--css-color-study-02);
 }
@@ -443,9 +446,9 @@ section.conteudo:nth-of-type(3) > div:nth-of-type(1) * {  /* HTML */
 
 
 
-section.conteudo:nth-of-type(4) * {  /* JavaScript */
+section.conteudo:nth-of-type(5) * {  /* JavaScript */
   color: var(--js-color-study-01);
-} section.conteudo:nth-of-type(4) > div > div > a:hover {
+} section.conteudo:nth-of-type(5) > div > div > a:hover {
   border: 1.5px solid var(--js-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--js-color-study-02);
 }
@@ -453,9 +456,9 @@ section.conteudo:nth-of-type(4) * {  /* JavaScript */
 
 
 
-section.conteudo:nth-of-type(5) * {  /* Python */
+section.conteudo:nth-of-type(6) * {  /* Python */
   color: var(--python-color-study-01);
-} section.conteudo:nth-of-type(5) > div > div > a:hover {
+} section.conteudo:nth-of-type(6) > div > div > a:hover {
   border: 1.5px solid var(--python-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--python-color-study-02);
 }
@@ -463,9 +466,9 @@ section.conteudo:nth-of-type(5) * {  /* Python */
 
 
 
-section.conteudo:nth-of-type(6) * {  /* C++ */
+section.conteudo:nth-of-type(7) * {  /* C++ */
   color: var(--cpp-color-study-01);
-} section.conteudo:nth-of-type(6) > div > div > a:hover {
+} section.conteudo:nth-of-type(7) > div > div > a:hover {
   border: 1.5px solid var(--cpp-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--cpp-color-study-02);
 }
