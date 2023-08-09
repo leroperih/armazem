@@ -40,21 +40,25 @@
   --color-dark-grey-01: #2f2f2f;
   --color-dark-grey-02: #2f2f2f80;
 
-  --css-color-study-01: #df80ff;
-  --css-color-study-02: #df80ff80;
-  --html-color-study-01: #00dada;
-  --html-color-study-02: #00dada80;
-  --js-color-study-01: #eede4e;
-  --js-color-study-02: #eede4e80;
-  --design-color-study-01: #19a65b;
-  --design-color-study-02: #19a65bb0;
-  --cpp-color-study-01: #25c5e5;
-  --cpp-color-study-02: #25c5e5b0;
-  --school-color-study-01: #e5ab25;
-  --school-color-study-02: #e5ab25b0;
-  --python-color-study-01: #c2be05;
-  --python-color-study-02: #c2be0580;
-
+  --school-color-study-01: #ff8800;
+  --school-color-study-02: #ff8800b0;
+  --python-color-study-01: #ffcc00;
+  --python-color-study-02: #ffcc0080;
+  --design-color-study-01: #8800bb;
+  --design-color-study-02: #8800bbb0;
+  --html-color-study-01: #4444ff;
+  --html-color-study-02: #4444ff80;
+  --art-color-study-01: #ff4400;
+  --art-color-study-02: #ff440080;
+  --cpp-color-study-01: #00ffee;
+  --cpp-color-study-02: #00ffeeb0;
+  --css-color-study-01: #ff00ff;
+  --css-color-study-02: #ff00ff80;
+  --cps-color-study-01: #ff5500;
+  --cps-color-study-02: #ff550080;
+  --js-color-study-01: #ffee40;
+  --js-color-study-02: #ffee4080;
+  
 
 
 
@@ -128,7 +132,7 @@ header {  /*  Header  ----------------------------------------------------------
   flex-direction: column;
   align-items: baseline;
   gap: 0.25em;
-  font-size: 2.5em;
+  font-size: 2.25em;
   letter-spacing: 0.15em;
   padding: 0em 2em;
   z-index: +1;
@@ -213,7 +217,7 @@ main {  /*  Main  --------------------------------------------------------------
 
 
 
-section#barra-social {
+section#barra-social {  /*  Barra Social  -----------------------------------------------------  */
   position: sticky;
   top: 0.75em;
   z-index: +10;
@@ -253,6 +257,10 @@ section#barra-social > div > div > div:nth-of-type(1) > div:hover {
 }
 
 
+
+
+
+
 div#container-waifu > a > img {  /* Menu Waifu */
   width: 100%; height: 100%;
 }
@@ -264,22 +272,42 @@ div#container-burge > div > div {  /* Menu Burger */
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-} div#container-burge > div > div > div {  /* Icone Menu Burger*/
+} div#container-burge > div > div > div {  /* Icone Menu Burger */
   width: 90%; height: 0.1em;
   background-color: var(--default-color-red-01);
   border-radius: 05% / 50%;
 }
 
 
-div#container-linso {
-  display: none;
-} div#container-linso * {
+div > nav > ul {  /* Links Sociais */
+  padding: 0.5em;
+  gap: 0.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  background-color: var(--color-darkest-black-02);
+  box-shadow: 0em 0em 8px var(--color-darkest-black-03);
+  border-radius: 1.5em;
+} div > nav > ul > li {
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} nav > ul > li > a {
+  font-size: 1em;
   color: var(--default-color-red-01);
-}
-div#container-linso.openBurge {
+  border-radius: 0.5em / 25%;
+  padding: 0.5em 2.5em;
+} nav > ul > li > a:hover {
+  background: var(--hover-color-01);
+  box-shadow: 0em 0em 0.25em var(--hover-color-01);
+} div#container-linso {
+  display: none;
+} div#container-linso.openBurge {  /* Function ClickBurge */
   display: flex;
 }
-
 
 
 
@@ -304,10 +332,10 @@ section.conteudo { /* Conteudo de Estudos */
   overflow: hidden;
   background-size: cover;
   background-position: top center;
-  box-shadow: inset 0em 0em 2em var(--color-darkest-black-03);
+  box-shadow: inset 0em 0em 4.5em var(--color-darkest-black-03);
   transition-duration: 0.075s;
 } section.conteudo > div:hover {
-  box-shadow: inset 0em 0em 2em var(--hover-color-02);
+  box-shadow: inset 0em 0em 6em var(--hover-color-02);
 } section.conteudo > div > h2 {
   font-family: var(--font-apple);
   color: var(--color-light-grey-01);
@@ -333,9 +361,9 @@ section.conteudo { /* Conteudo de Estudos */
 }
 
 section.two > div:nth-of-type(1) {
-  border-radius: 2.5em 1em 0.25em 1em;
+  border-radius: 2em 1em 0.25em 1em;
 } section.two > div:nth-of-type(2) {
-  border-radius: 0.25em 1em 2.5em 1em;
+  border-radius: 0.25em 1em 2em 1em;
 }
 
 
@@ -374,15 +402,15 @@ section.conteudo:nth-of-type(1) > * {  /* Backgrounds */
 
 
 section.conteudo:nth-of-type(1) > div * {  /* ARTES */
-  color: var(--default-color-red-01);
+  color: var(--art-color-study-01);
 } section.conteudo:nth-of-type(1) > div > p {
   width: 9em;
   font-size: 1em;
   padding-left: 1.5em;
   color: var(--color-lighter-white-02);
 } section.conteudo:nth-of-type(1) > div > div > a:hover {
-  border: 1.5px solid var(--default-color-red-02);
-  box-shadow: inset 0em 0em 0.5em var(--default-color-red-02);
+  border: 1.5px solid var(--art-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--art-color-study-02);
 } section.conteudo:nth-of-type(1) > div:nth-of-type(2) { display: none; }
 
 
@@ -451,10 +479,10 @@ section.conteudo:nth-last-of-type(1) > div:nth-of-type(1) * {  /* School */
   border: 1.5px solid var(--school-color-study-02);
   box-shadow: inset 0em 0em 0.5em var(--school-color-study-02);
 } section.conteudo:nth-last-of-type(1) > div:nth-of-type(2) * {  /* Seta */
-  color: var(--default-color-red-01);
+  color: var(--cps-color-study-01);
 } section.conteudo:nth-last-of-type(1) > div:nth-of-type(2) > div > a:hover {
-  border: 1.5px solid var(--default-color-red-02);
-  box-shadow: inset 0em 0em 0.5em var(--default-color-red-02);
+  border: 1.5px solid var(--cps-color-study-02);
+  box-shadow: inset 0em 0em 0.5em var(--cps-color-study-02);
 }
 
 
@@ -476,12 +504,16 @@ footer {  /*  Footer  ----------------------------------------------------------
   color: var(--color-light-grey-01);
 } img#emoji {
   width: 0.8em; height: 0.8em;
-} div#notes > * {
+} div#notes {
+  display: grid;
+  grid-template-columns: repeat( 2, 1fr);
+  padding: 0.5em;
+} div#notes > div > * {
   font-family: var(--font-apple);
   font-weight: 400;
-} div#notes p {
+} div#notes > div p {
   font-size: 0.8em;
-  padding-left: 1em;
+  text-indent: 1em;
 } div#notes h3 {
   margin: 0.5em 0em;
 }
