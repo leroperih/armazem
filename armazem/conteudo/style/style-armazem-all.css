@@ -296,7 +296,7 @@ div > nav > ul {  /* Links Sociais */
   justify-content: center;
   align-items: center;
 } nav > ul > li > a {
-  font-size: 1em;
+  font-size: 1.2em;
   color: var(--default-color-red-01);
   border-radius: 0.5em / 25%;
   padding: 0.5em 2.5em;
