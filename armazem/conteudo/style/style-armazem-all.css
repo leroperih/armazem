@@ -500,13 +500,13 @@ footer {  /*  Footer  ----------------------------------------------------------
   background-color: var(--color-dark-black-01);
   width: 100%; min-height: 6em;
   padding: 0.75em 1em;
+  box-sizing: border-box;
 } footer * {  /* Footer */
   color: var(--color-light-grey-01);
 } img#emoji {
   width: 0.8em; height: 0.8em;
 } div#notes {
   display: grid;
-  grid-template-columns: repeat( 2, 1fr);
   padding: 0.5em;
 } div#notes > div > * {
   font-family: var(--font-apple);
