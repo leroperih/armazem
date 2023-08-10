@@ -333,7 +333,6 @@ section.conteudo { /* Conteudo de Estudos */
   background-size: cover;
   background-position: top center;
   box-shadow: inset 0em 0em 4.5em var(--color-darkest-black-03);
-  transition-duration: 0.075s;
 } section.conteudo > div:hover {
   box-shadow: inset 0em 0em 6em var(--hover-color-02);
 } section.conteudo > div > h2 {  /* Título */

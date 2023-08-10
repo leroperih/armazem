@@ -50,6 +50,7 @@ div#container-linso > nav > ul {  /* Links Sociais */
   padding: 0em min(2vw , 1em);
   flex-direction: row;
 } nav > ul > li > a {
+  font-size: 1em;
   padding: 0em;
   margin: 0em min(1vw , 0.85em);
   border-radius: 0.1em / 1em;
