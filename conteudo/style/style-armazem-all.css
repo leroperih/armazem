@@ -229,6 +229,7 @@ section#barra-social {  /*  Barra Social  --------------------------------------
   box-shadow: 0em 0.5em 1.25em var(--color-darkest-black-03);
 } section#barra-social > div > div {  /* divisores */
   display: flex;
+  flex-direction: row-reverse;
 } section#barra-social > div > div > div {  /* conteudo */
   height: var(--barso-height);
 } section#barra-social > div > div > div:nth-of-type(1) {  /* icones */
