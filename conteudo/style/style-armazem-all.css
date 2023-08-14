@@ -237,13 +237,13 @@ section#barra-social {  /*  Barra Social  --------------------------------------
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  overflow: hidden;
   background-color: var(--color-darkest-black-03);
   box-shadow: 0em 0em 8px var(--color-darkest-black-03);
   transition-duration: 0.1s;
 } section#barra-social > div > div > div:nth-of-type(1) > a ,
 section#barra-social > div > div > div:nth-of-type(1) > div {
   width: 100%; height: 100%;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -32,8 +32,6 @@ main > * {
 section#barra-social {  /* Barra Social */
   width: 95%;
   max-width: 75em;
-} section#barra-social > div {  /* background */
-  flex-direction: row-reverse;
 }
 
 
