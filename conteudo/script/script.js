@@ -1,4 +1,4 @@
-div_dis_op = document.querySelector("div#header-container-links")
+
 
 function ClickBurge() {
 
