@@ -44,7 +44,7 @@ div#container-linso { display: flex; }
 
 
 
-nav > ul > li:nth-of-type(1) {
+nav > ul > li:nth-of-type(1) {  /* ⚪ Links Sociais */
   padding-left: 1.3em;
   border-top-left-radius: var(--social-element-size);
   border-bottom-left-radius: var(--social-element-size);
@@ -69,12 +69,25 @@ nav > ul > li:nth-of-type(1) {
 
 
 
-main { /* Main ------------------------------------------------------------------------------------------------------------------------- */
+main {  /* Main ------------------------------------------------------------------------------------------------------------------------ */
   border-top: 2px solid #100000;
   background: var(--bg-main-gradient-effect-02);
 } main > * {
-  width: 95%;
-  max-width: 60em;
+  max-width: 64em;
+}
+
+
+
+
+div.bg-dark {  /* Fundo Escuro */
+  background-color: var(--color-darkest-black-01);
+  background-image:
+   linear-gradient(
+   180deg ,
+   #040408 ,
+   #000000
+   );
+  box-shadow: 0em 0em 1em var(--color-darkest-black-02);
 }
 
 
@@ -83,17 +96,17 @@ main { /* Main -----------------------------------------------------------------
 
 
 
-section#apres * {
-  margin: 0.35em;
+div#apres * {  /* Section Apresentação */
   text-align: left;
-} section#apres > div {
-  background-color: var(--color-darkest-black-03);
-  box-shadow: 0em 0em 0.5em var(--color-darkest-black-03);
+} div#apres {
   flex-direction: row;
-} section#apres > div > div:nth-of-type(1) {
-  max-width: 16em;
-} section#apres > div > div:nth-of-type(2) {
-  max-width: 18em;
+  border-top: 2px solid var(--color-medium-black-02);
+  border-bottom: 2px solid var(--color-medium-black-02);
+} div#apres > div {
+  width: 100%;
+  max-width: 18.5em;
+} div#apres h1 {
+  font-size: 1.85em;
 }
 
 
@@ -103,30 +116,43 @@ section#apres * {
 
 
 
-div#bg-study {
+div.bg-study {  /* Section Study */
+  max-width: 64em;
   gap: 0.8em;
   border: none;
   box-shadow: none;
   flex-direction: column-reverse;
-} div#study > div#bg-study > div {
+} div.study > div.bg-study > div {
   border-radius: 1em;
-  box-sizing: border-box;
   border-left: 1.5px solid var(--color-medium-black-02);
   border-right: 1.5px solid var(--color-medium-black-02);
-} div#bg-study > div:nth-of-type(2) > div:nth-of-type(2) {
+} div.bg-study > div:nth-of-type(2) > div:nth-of-type(2) {
   background-image: var(--bg-study-gradient-effect-02);
-} div#bg-study > div:nth-of-type(2) {
-  overflow: hidden;
+} div.bg-study > div:nth-of-type(2) {
+  height: 14em;
 }
 
 
 
-div#bg-study div:nth-of-type(1) a { display: block; }
-div#bg-study div:nth-of-type(2) a { display: none; }
+div.bg-study div:nth-of-type(1) a { display: block; }
+div.bg-study div:nth-of-type(2) a { display: none; }
 
 
 
 
+
+div.study.two {
+  flex-direction: row;
+  gap: 0.8em;
+} div.study.two > div {
+  background-color: var(--color-darkest-black-02);
+  gap: 0em;
+} div.study.two > div > div {
+  border-radius: 0em;
+} div.study.two > div > div:nth-of-type(2) {
+  border-bottom: 1px solid var(--color-dark-grey-01);
+  height: 10em;
+}
 
 
 

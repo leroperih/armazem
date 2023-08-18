@@ -56,24 +56,24 @@
   --color-lighter-white-01: #ffffff;
   --color-lighter-white-02: #ffffffd0;
 
-  --school-color-study-01: #ff8800;
-  --school-color-study-02: #ff8800b0;
-  --python-color-study-01: #ffcc00;
-  --python-color-study-02: #ffcc0080;
-  --design-color-study-01: #8800bb;
-  --design-color-study-02: #8800bbb0;
-  --html-color-study-01: #4444ff;
-  --html-color-study-02: #4444ff80;
-  --art-color-study-01: #ff4400;
-  --art-color-study-02: #ff440080;
-  --cpp-color-study-01: #00ffee;
-  --cpp-color-study-02: #00ffeeb0;
-  --css-color-study-01: #ff00ff;
-  --css-color-study-02: #ff00ff80;
-  --cps-color-study-01: #ff5500;
-  --cps-color-study-02: #ff550080;
-  --js-color-study-01: #ffee40;
-  --js-color-study-02: #ffee4080;
+  --color-study-school-01: #ff8800;
+  --color-study-school-02: #ff8800b0;
+  --color-study-python-01: #ffcc00;
+  --color-study-python-02: #ffcc00b0;
+  --color-study-design-01: #8800bb;
+  --color-study-design-02: #8800bbb0;
+  --color-study-html-01: #4444ff;
+  --color-study-html-02: #4444ffb0;
+  --color-study-css-01: #ff00ff;
+  --color-study-css-02: #ff00ffb0;
+  --color-study-cpp-01: #00ffee;
+  --color-study-cpp-02: #00ffeeb0;
+  --color-study-art-01: #ff4400;
+  --color-study-art-02: #ff4400b0;
+  --color-study-cps-01: #ff5500;
+  --color-study-cps-02: #ff5500b0;
+  --color-study-js-01: #ffee40;
+  --color-study-js-02: #ffee40b0;
 
 
 
@@ -88,19 +88,19 @@
   --bg-main-gradient-effect-01:
    linear-gradient(
    180deg,
-   #09090d 0em ,
-   #050505 20vh ,
-   #030303 40vh ,
-   #020202 60vh
+   #0a0a0d 3em ,
+   #070707 30vh ,
+   #060606 50vh ,
+   #050505 70vh
   );
 
   --bg-main-gradient-effect-02:
    linear-gradient(
    180deg,
-   #09090d 0em ,
-   #050505 20vh ,
-   #030303 40vh ,
-   #020202 60vh
+   #0a0a0d 0em ,
+   #070707 20vh ,
+   #060606 40vh ,
+   #050505 60vh
   );
 
 
@@ -254,7 +254,7 @@ header {  /* Header ------------------------------------------------------------
 
 
 div#social-bar {  /* Main Barra Social ------------------------------------------------------------------------------------------------- */
-  width: 100%;
+  padding: 0em;
   position: sticky;
   top: 0em;
   z-index: +10;
@@ -271,7 +271,7 @@ div#social-bar {  /* Main Barra Social -----------------------------------------
   justify-content: space-between;
   background-color: var(--color-darkest-black-03);
   box-shadow: 0em 0.5em 1.25em var(--color-darkest-black-03);
-} div#bg-social-bar > div {  /* Barra Social Containers */
+} div#bg-social-bar > div {  /* Barra Social Divisores */
   position: relative;
 } div#bg-social-bar > div > div {
   height: var(--social-element-size);
@@ -279,7 +279,6 @@ div#social-bar {  /* Main Barra Social -----------------------------------------
   border-radius: var(--social-element-size);
 } div.container-icon {  /* Barra Social Icons */
   width: var(--social-element-size);
-  transition-duration: var(--transition-time-01);
 } div.container-icon * {
   width: 100%;
   height: 100%;
@@ -296,15 +295,9 @@ div#social-bar {  /* Main Barra Social -----------------------------------------
 
 
 
-
-
 div#container-burge { display: flex; }
 div#container-linso { display: none; }
 div#container-notes { display: none; }
-
-
-
-
 
 
 
@@ -317,10 +310,6 @@ div#container-burge > div > div {  /* Menu Burge */
   width: 85%; height: 0.1em;
   background-color: var(--default-color-red-01);
 }
-
-
-
-
 
 
 
@@ -340,7 +329,6 @@ div#social-bar div#container-linso {  /* ⚪ Links Sociais */
 } div#container-linso a {
   font-size: 1.3em;
   font-weight: normal;
-  color: var(--color-light-grey-02);
   height: fit-content;
   transform: translateY(-0.1em);
 } nav > ul > li:hover {  /* Hover Social Nav Content */
@@ -372,13 +360,44 @@ div#social-bar div#container-linso {  /* ⚪ Links Sociais */
 
 main {  /* Main ------------------------------------------------------------------------------------------------------------------------ */
   padding-bottom: 2.5em;
-  min-height: 100em;
-  transform-style: preserve-3d;
-  z-index: +5;
   background: var(--bg-main-gradient-effect-01);
 } main > * {
-  width: calc(100% - 2.5em);
-  margin: 3.5em auto;
+  border-radius: 0.75em;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1.25em;
+  padding: 1em;
+}
+
+
+
+
+
+
+#art h1 { color: var(--color-study-art-02);}  /* Cores Study */
+#design h1 { color: var(--color-study-design-02);}
+#html h1 { color: var(--color-study-html-02);}
+#css h1 { color: var(--color-study-css-02);}
+#js h1 { color: var(--color-study-js-02);}
+#python h1 { color: var(--color-study-python-02);}
+#cpp h1 { color: var(--color-study-cpp-02);}
+#school h1 { color: var(--color-study-school-02);}
+#cps h1 { color: var(--color-study-cps-02);}
+
+
+div.bg-dark {  /* Fundo Escuro */
+  width: auto; max-width: 92.5%;
+  margin: 1em auto; padding: 1em;
+}
+
+
+div.titu-section {  /* Títulos */
+  margin-top: 3.5em;
+} div.titu-section * {
+  border-bottom: 1.5px solid var(--color-light-grey-02);
+  font-size: 1.6em;
+  text-indent: 0.4em;
 }
 
 
@@ -388,27 +407,27 @@ main {  /* Main ----------------------------------------------------------------
 
 
 
-section#apres {
+div#apres div
+, div#apres {  /* Apresentação */
   color: var(--color-light-grey-02);
-  font-size: calc(1em + 0.2vw);
-} section#apres * {
   text-align: center;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-} section#apres > div {
-  width: 95%;
-  max-width: 60em;
-  border-radius: 0.25em;
-  padding: 2.4em 0em;
+} div#apres {
+  padding: 3em 1em;
   gap: 1em;
-} section#apres > div > div:nth-of-type(2) {
-  width: 75%;
-} section#apres > div > div:nth-of-type(1) {
-  width: 50%;
-} section#apres img {
+} div#apres > div:nth-of-type(1) {
+  width: 60%;
+} div#apres > div:nth-of-type(2) {
+  padding: 0.5em;
+  gap: 0.5em;
+} div#apres img {
   width: 100%;
+} div#apres h1 {
+  line-height: 1.1em;
+  font-weight: normal;
 }
 
 
@@ -418,62 +437,71 @@ section#apres {
 
 
 
-div#study * {
+div.study * {  /* Study */
+  color: var(--color-light-grey-01);
   transition-duration: var(--transition-time-01);
-} div#bg-study {
   display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+} div.bg-study {
   flex-direction: column;
   border-radius: 1em;
   box-shadow: 0em 0em 1.2em var(--color-darkest-black-03);
   border-left: 1.5px solid var(--color-medium-black-03);
   border-right: 1.5px solid var(--color-medium-black-03);
-  overflow: hidden;
-} div#bg-study div {
+} div.bg-study div {
   width: 100%; height: 100%;
   position: relative;
-  display: flex;
-  justify-content: space-between;
-} div#bg-study > div:nth-of-type(1) {
+} div.bg-study > div:nth-of-type(1) {
+  box-sizing: border-box;
+  padding: 0.25em 1em;
+  height: 3.5em;
   background-color: var(--color-darkest-black-02);
   border-bottom: 1px solid var(--color-medium-black-02);
-} div#bg-study > div:nth-of-type(2) {
-  height: 16em;
-} div#bg-study > div:nth-of-type(2) > div:nth-of-type(2) {
-  transition-duration: var(--transition-time-01);
-  background-image: var(--bg-study-gradient-effect-01);
-  box-shadow: inset 0em 0em 3.5em var(--color-darkest-black-02);
+} div.bg-study > div:nth-of-type(2) {
+  height: 14em;
+} div.bg-study > div:nth-of-type(2) > div:nth-of-type(2) {
+  box-sizing: border-box;
+  padding: 1.5em;
   position: absolute;
   bottom: 0em;
-  display: block;
-} div#bg-study h1
-, div#bg-study p {
-  margin: 0.15em 0.7em;
-} div#bg-study img {
+  background-image: var(--bg-study-gradient-effect-01);
+  box-shadow: inset 0em 0em 3.5em var(--color-darkest-black-02);
+} div.bg-study img {
   width: 100%; height: 100%;
   object-fit: cover;
-} div#bg-study a {
+} div.bg-study p {
+  font-size: 1em;
+} div.bg-study a {
   background-color: var(--color-dark-black-01);
   margin: 0.35em;
   font-size: 1.35em;
   padding: 0.2em 1em;
   border: 1.5px solid var(--color-dark-grey-01);
-  border-radius: 0.7em;
+  border-radius: 0.6em;
   position: absolute;
   bottom: 0em; right: 0em;
-} div#bg-study a:hover {
+} div.bg-study a:hover {
   background-color: var(--color-medium-black-01);
   box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-02);
-} div#bg-study p {
-  margin: min(2.5vw , 1.5em) 0em 0em min(2.5vw , 1.5em);
 }
 
 
 
-div#bg-study div:nth-of-type(1) a { display: none; }
-div#bg-study div:nth-of-type(2) a { display: block; }
+div.bg-study div:nth-of-type(1) a { display: none; }
+div.bg-study div:nth-of-type(2) a { display: block; }
 
 
-
+div.study.two {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+} div.study.two > * {
+  width: 100%;
+} div.study.two > div > div:nth-of-type(2) {
+  height: 8em;
+}
 
 
 
