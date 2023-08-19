@@ -366,7 +366,7 @@ main {  /* Main ----------------------------------------------------------------
   box-sizing: border-box;
   width: 100%;
   margin: auto;
-  margin-bottom: 1.25em;
+  margin-bottom: 0.25em;
   padding: 1em;
 }
 
@@ -473,17 +473,17 @@ div.study * {  /* Study */
 } div.bg-study p {
   font-size: 1em;
 } div.bg-study a {
-  background-color: var(--color-dark-black-01);
+  background-color: var(--color-light-black-03);
   margin: 0.35em;
   font-size: 1.35em;
   padding: 0.2em 1em;
-  border: 1.5px solid var(--color-dark-grey-01);
+  border: 1.5px solid var(--color-dark-grey-02);
   border-radius: 0.6em;
   position: absolute;
   bottom: 0em; right: 0em;
 } div.bg-study a:hover {
-  background-color: var(--color-medium-black-01);
-  box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-02);
+  background-color: var(--color-light-black-02);
+  box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-01);
 }
 
 
