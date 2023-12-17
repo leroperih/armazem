@@ -164,5 +164,7 @@ footer > * { /* Footer ---------------------------------------------------------
   max-width: 75em;
   margin: auto;
 } div#notes {
-  grid-template-columns: repeat( 3, 1fr);
+  display: grid;
+  grid-template-columns: repeat( 3 , 30% );
+  gap: 05%;
 }
