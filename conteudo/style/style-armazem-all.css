@@ -91,10 +91,11 @@
   --bg-main-gradient-effect-01:
    linear-gradient(
    180deg,
-   #0a0a0d 3em ,
+   #0a0a0e 0em ,
+   #0a0a0e 3em ,
    #070707 30vh ,
-   #060606 50vh ,
-   #050505 70vh
+   #060606 35vh ,
+   #050505 50vh
   );
 
   --bg-main-gradient-effect-02:
@@ -107,19 +108,19 @@
   );
 
 
-  --bg-study-gradient-effect-01:
+  --container-study-elements-gradient-effect-01:
    linear-gradient(
    160deg ,
    #000000 00%,
-   #000000ee 20%,
-   #000000cc 40%,
-   #000000aa 60%,
-   #00000066 80%,
+   #000000dd 20%,
+   #000000bb 40%,
+   #00000088 60%,
+   #00000044 80%,
    transparent
   );
 
 
-  --bg-study-gradient-effect-02:
+  --container-study-elements-gradient-effect-02:
    linear-gradient(
    130deg ,
    #000000ee 00%,
@@ -234,7 +235,10 @@ header {  /* Header ------------------------------------------------------------
   width: 100%; height: 100%;
   bottom: 0em;
   background-image: var(--lateral-dark-gradient-effect-01);
-  box-shadow: inset 0em 0em 2.5em var(--color-darkest-black-01);
+  box-shadow:
+    inset 0em 0em 1.5em var(--color-darkest-black-01),
+    inset 0em 0em 3.5em var(--color-darkest-black-01)
+  ;
 }
 
 
@@ -370,7 +374,6 @@ main {  /* Main ----------------------------------------------------------------
   box-sizing: border-box;
   width: 100%;
   margin: auto;
-  margin-bottom: 0.25em;
   padding: 1em;
 }
 
@@ -447,36 +450,38 @@ div.study * {  /* Study */
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-} div.bg-study {
+} div.container-study-elements {
+  position: relative;
   flex-direction: column;
   border-radius: 1em;
-  box-shadow: 0em 0em 1.2em var(--color-darkest-black-03);
+  box-shadow: 0em 0em 1.2em var(--color-medium-black-02);
   border-left: 1.5px solid var(--color-medium-black-03);
   border-right: 1.5px solid var(--color-medium-black-03);
-} div.bg-study div {
+} div.container-study-elements div {
   width: 100%; height: 100%;
   position: relative;
-} div.bg-study > div:nth-of-type(1) {
+} div.container-study-elements > div:nth-of-type(1) {
   box-sizing: border-box;
   padding: 0.25em 1em;
   height: 3.5em;
-  background-color: var(--color-darkest-black-02);
+  background-color: var(--color-darkest-black-03);
   border-bottom: 1px solid var(--color-medium-black-02);
-} div.bg-study > div:nth-of-type(2) {
-  height: 14em;
-} div.bg-study > div:nth-of-type(2) > div:nth-of-type(2) {
+} div.container-study-elements > div:nth-of-type(2) {
+  height: 16em;
+} div.container-study-elements > div:nth-of-type(2) > div {
   box-sizing: border-box;
   padding: 1.5em;
   position: absolute;
   bottom: 0em;
-  background-image: var(--bg-study-gradient-effect-01);
+  background-image: var(--container-study-elements-gradient-effect-01);
   box-shadow: inset 0em 0em 3.5em var(--color-darkest-black-02);
-} div.bg-study img {
+} div.container-study-elements img {
+  position: absolute;
   width: 100%; height: 100%;
   object-fit: cover;
-} div.bg-study p {
+} div.container-study-elements p {
   font-size: 1em;
-} div.bg-study a {
+} div.container-study-elements a {
   background-color: var(--color-light-black-03);
   margin: 0.35em;
   font-size: 1.35em;
@@ -485,15 +490,20 @@ div.study * {  /* Study */
   border-radius: 0.6em;
   position: absolute;
   bottom: 0em; right: 0em;
-} div.bg-study a:hover {
+} div.container-study-elements a:hover {
   background-color: var(--color-light-black-02);
   box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-01);
 }
 
 
 
-div.bg-study div:nth-of-type(1) a { display: none; }
-div.bg-study div:nth-of-type(2) a { display: block; }
+div.container-study-elements div:nth-of-type(1) a { display: none; }
+div.container-study-elements div:nth-of-type(2) a { display: block; }
+
+
+div.study.two div.container-study-elements div:nth-of-type(1) a { display: block; }
+div.study.two div.container-study-elements div:nth-of-type(2) a { display: none; }
+
 
 
 div.study.two {
@@ -504,7 +514,7 @@ div.study.two {
 } div.study.two > * {
   width: 100%;
 } div.study.two > div > div:nth-of-type(2) {
-  height: 8em;
+  height: 10em;
 }
 
 
@@ -575,8 +585,18 @@ div#container-linso.openBurge { /* Bar Social Links */
   width: 100%;
 } nav > ul > li:hover {  /* Hover Social Nav Content */
   box-shadow: inset 0em 0em 0.8em var(--hover-color-02);
-}
+} 
 
+
+div.container-study-elements > div:nth-of-type(2) > div {
+  padding-top: 5em;
+} div.container-study-elements > div:nth-of-type(1) {
+  z-index: +1;
+  position: absolute;
+  width: 100%;
+  top: 0em;
+  right: 0em;
+}
 
 
 
