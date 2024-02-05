@@ -67,6 +67,8 @@
   --color-study-design-02: #8800bbb0;
   --color-study-html-01: #4444ff;
   --color-study-html-02: #4444ffb0;
+  --color-study-kana-01: #ff7f50;
+  --color-study-kana-02: #ff7f50b0;
   --color-study-css-01: #ff00ff;
   --color-study-css-02: #ff00ffb0;
   --color-study-cpp-01: #00ffee;
@@ -391,6 +393,7 @@ main {  /* Main ----------------------------------------------------------------
 #cpp h1 { color: var(--color-study-cpp-02);}
 #school h1 { color: var(--color-study-school-02);}
 #cps h1 { color: var(--color-study-cps-02);}
+#ime-kana h1 { color: var(--color-study-kana-02);}
 
 
 div.bg-dark {  /* Fundo Escuro */
