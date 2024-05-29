@@ -453,6 +453,8 @@ div.study * {  /* Study */
   display: flex;
   justify-content: space-between;
   overflow: hidden;
+} div.study h1 {
+  font-weight: bolder;
 } div.container-study-elements {
   position: relative;
   flex-direction: column;
