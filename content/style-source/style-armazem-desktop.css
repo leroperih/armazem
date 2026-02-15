@@ -87,7 +87,7 @@ div.bg-dark {  /* Fundo Escuro */
    #040408 ,
    #000000
    );
-  box-shadow: 0em 0em 1em var(--color-darkest-black-02);
+  box-shadow: 0em 0.5em 3em var(--color-darkest-black-02);
 }
 
 
