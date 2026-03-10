@@ -79,6 +79,8 @@
   --color-study-cps-02: #ff5500b0;
   --color-study-js-01: #ffee40;
   --color-study-js-02: #ffee40b0;
+  --color-study-math-01: #00ff80;
+  --color-study-math-02: #00ff80b0;
 
 
 
@@ -394,6 +396,8 @@ main {  /* Main ----------------------------------------------------------------
 #school h1 { color: var(--color-study-school-02);}
 #cps h1 { color: var(--color-study-cps-02);}
 #ime-kana h1 { color: var(--color-study-kana-02);}
+#math h1 { color: var(--color-study-math-02);}
+#entertainment h1 { color: var(--color-study-art-02);}
 
 
 div.bg-dark {  /* Fundo Escuro */
