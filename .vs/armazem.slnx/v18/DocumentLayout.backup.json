@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\pag-armazem.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:pag-armazem.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\content\\style-source\\style-armazem-all.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:content\\style-source\\style-armazem-all.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\content\\style-source\\style-armazem-desktop.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:content\\style-source\\style-armazem-desktop.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "style-armazem-desktop.css",
+              "DocumentMoniker": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\content\\style-source\\style-armazem-desktop.css",
+              "RelativeDocumentMoniker": "content\\style-source\\style-armazem-desktop.css",
+              "ToolTip": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\content\\style-source\\style-armazem-desktop.css",
+              "RelativeToolTip": "content\\style-source\\style-armazem-desktop.css",
+              "ViewState": "AgIAACUAAAAAAAAAAADwvzAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-10T17:15:40.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "pag-armazem.html",
+              "DocumentMoniker": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\pag-armazem.html",
+              "RelativeDocumentMoniker": "pag-armazem.html",
+              "ToolTip": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\pag-armazem.html",
+              "RelativeToolTip": "pag-armazem.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-03-10T17:13:50.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c6f34f0d-7ae5-4f3a-be61-fe0c21ae9eb8}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "d96dbcf3-bc4f-45dd-86c5-e79d53c67adc",
+        "Display": 0,
+        "X": 196,
+        "Y": 239,
+        "Width": 1905,
+        "Height": 1032,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style-armazem-all.css",
+              "DocumentMoniker": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\content\\style-source\\style-armazem-all.css",
+              "RelativeDocumentMoniker": "content\\style-source\\style-armazem-all.css",
+              "ToolTip": "C:\\Users\\qgwolf\\Documents\\GitHub\\armazem\\content\\style-source\\style-armazem-all.css",
+              "RelativeToolTip": "content\\style-source\\style-armazem-all.css",
+              "ViewState": "AgIAANQBAAAAAAAAAAAwwI4BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-10T17:15:39.182Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
