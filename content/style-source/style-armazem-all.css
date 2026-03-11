@@ -60,6 +60,8 @@
     --color-light-white-02: #f0f0f0a0;
     --color-lighter-white-01: #ffffff;
     --color-lighter-white-02: #ffffffd0;
+    --color-lighter-white-03: #ffffffb0;
+
 
     --color-study-school-01: #ff8800;
     --color-study-school-02: #ff8800b0;
@@ -172,9 +174,10 @@
 
 
 
+/* DEAULT GENERAL STYLE ______________________________________________________________________________________________________ */
 
 
-        /* CSS Padrão Geral */
+    /* CSS Padrão Geral */
     *
     {
         padding: 0em; margin: 0em;
@@ -184,27 +187,35 @@
 
     body, html
     {
-        width: 100vw; height: 100vh;
+        width: 100vw;
         margin: auto;
-        perspective: 10px;
         overflow-x: hidden;
         background-color: var(--color-dark-black-01);
     }
 
     body
     {
-        position: relative;
+        perspective: 1000px;
     }
 
     body *
     {
-        color: var(--color-light-white-02);
+        color: var(--color-lighter-white-03);
         font-family: var(--font-apple);
         font-weight: lighter;
     }
 
 
-        /* Scroll Space */
+
+
+
+
+
+
+/* DEFAULT SCROLL ____________________________________________________________________________________________________________ */
+
+
+    /* Scroll Space */
     body::-webkit-scrollbar
     {
         background-color: var(--color-darkest-black-01); width: 0.5em;
@@ -240,36 +251,68 @@
 
 
 
+/* HEADER -------------------------------------------------------------------------------------------------------------------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Header -------------------------------------------------------------------------------------------------------------------- */
 
     header
     {
         height: 12em;
-        background: url("../bg-night.jpg") center center no-repeat;
-        background-size: cover;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
     }
 
-    header div
+
+
+
+
+/* PARALLAX EFFECT ___________________________________________________________________________________________________________ */
+
+
+    #night-parallax, #parallax-text
     {
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+
+    #wrap-parallax
+    {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+    }
+
+    #night_parallax
+    {
+        top: 0em;
+        left: 0em;
+        width: 100%;
+        height: 120%;
+        position: absolute;
+        object-fit: cover;
+        z-index: 1;
+        background: url('../bg-night.jpg') center center no-repeat;
+        background-size: cover;
+        display: block !important;
+    }
+
+    /*
+    #parallax-text
+    {
+        position: absolute;
+        z-index: 2;
+        color: var(--default-color-red-02);
+        font-size: 4rem;
+        font-weight: bolder;
+    }
+    */
+
+    header div:nth-of-type(2)
+    {
+        top: 0em;
+        left: 0em;
         position: absolute;
         width: 100%; height: 100%;
         bottom: 0em;
@@ -277,6 +320,7 @@
         box-shadow:
         inset 0em 0em 1.5em var(--color-darkest-black-01),
         inset 0em 0em 3.5em var(--color-darkest-black-01);
+        z-index: 2;
     }
 
 

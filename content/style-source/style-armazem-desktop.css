@@ -7,14 +7,27 @@
 
 /* Header ------------------------------------------------------------------------------------------------------------------------------ */
 
-    header
-    {
-        height: 20em;
+    header {
+        height: 60vh;
+        position: relative;
+        overflow: hidden;
+        /* ESSENCIAL: Cria o contexto 3D para os filhos */
+        transform-style: preserve-3d;
     }
 
-    header h1
+    #night-parallax
     {
-        font-size: 3.5em;
+        background: url('../bg-night.jpg') no-repeat center;
+        background-size: cover;
+        height: 150%; /* Mantém maior que o header */
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* O TRUQUE: Afasta no eixo Z para mover mais devagar que o scroll */
+        /* E aumenta o scale para compensar o recuo da perspectiva */
+        transform: translateZ(-5px) scale(1.6);
+        z-index: 1;
     }
 
 
