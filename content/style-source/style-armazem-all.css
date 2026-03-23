@@ -21,7 +21,7 @@
 
 
 
-    --social-element-size: 3em;
+    --size-icons: 3em;
 
 
     --transition-time-01: 0.15s;
@@ -174,76 +174,7 @@
 
 
 
-/* DEAULT GENERAL STYLE ______________________________________________________________________________________________________ */
 
-
-    /* CSS Padrão Geral */
-    *
-    {
-        padding: 0em; margin: 0em;
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-    }
-
-    body, html
-    {
-        width: 100vw;
-        margin: auto;
-        overflow-x: hidden;
-        background-color: var(--color-dark-black-01);
-    }
-
-    body
-    {
-        perspective: 1000px;
-    }
-
-    body *
-    {
-        color: var(--color-lighter-white-03);
-        font-family: var(--font-apple);
-        font-weight: lighter;
-    }
-
-
-
-
-
-
-
-
-/* DEFAULT SCROLL ____________________________________________________________________________________________________________ */
-
-
-    /* Scroll Space */
-    body::-webkit-scrollbar
-    {
-        background-color: var(--color-darkest-black-01); width: 0.5em;
-    }
-
-        /* Fundo Scroll */
-    body::-webkit-scrollbar-track
-    {
-        border-radius: 0.25em; border: 2px solid var(--color-darkest-black-01);
-        margin: 0.25em 0em;
-    }
-
-    body::-webkit-scrollbar-track:hover
-    {
-        background: var(--color-medium-black-01);
-    }
-
-        /* Mover Scroll */
-    body::-webkit-scrollbar-thumb
-    {
-        border: 1px solid var(--color-darkest-black-01); border-radius: 0.25em;
-        background-color: var(--color-medium-black-01);
-    }
-
-    body::-webkit-scrollbar-thumb:hover
-    {
-        background: var(--color-dark-grey-01);
-    }
 
 
 
@@ -293,7 +224,7 @@
         position: absolute;
         object-fit: cover;
         z-index: 1;
-        background: url('../bg-night.jpg') center center no-repeat;
+        background: url('../../../content/content/bg-night.jpg') center center no-repeat;
         background-size: cover;
         display: block !important;
     }
@@ -399,15 +330,15 @@
 
     div#bg-social-bar > div > div
     {
-        height: var(--social-element-size);
+        height: var(--size-icons);
         border: 1.5px solid var(--color-medium-black-02);
-        border-radius: var(--social-element-size);
+        border-radius: var(--size-icons);
     }
 
     /* SOCIAL ICON */
     div.container-icon
     {
-        width: var(--social-element-size);
+        width: var(--size-icons);
     }
 
     div.container-icon *
@@ -454,7 +385,7 @@
 
     div#container-linso ul *
     {
-        height: var(--social-element-size);
+        height: var(--size-icons);
         transition-duration: 0.25s;
     }
 
