@@ -5,197 +5,140 @@
 
 
 
-/* Header ------------------------------------------------------------------------------------------------------------------------------ */
 
-    header {
-        height: 60vh;
-        position: relative;
-        overflow: hidden;
-        /* ESSENCIAL: Cria o contexto 3D para os filhos */
-        transform-style: preserve-3d;
+
+
+
+/* SOCIAL-BAR ____________________________________________________________________________________________________________________________________________________________________________ */
+
+
+/* SOCIAL-BAR */
+div#bg-social-bar {
+    box-sizing: border-box;
+    width: calc(100% - 2em);
+    max-width: 75em;
+    padding: 0.1em;
+    border-radius: var( --size-icons );
+}
+
+div#container-notes > p {
+    text-indent: 1.5em;
+    transform: scale(132%)
+}
+
+div#container-burge {
+    display: none;
+}
+
+div#container-linso {
+    display: flex;
+}
+
+nav > ul > li:nth-of-type(1) {
+    padding-left: 1.3em;
+    border-top-left-radius: var( --size-icons );
+    border-bottom-left-radius: var( --size-icons );
+}
+
+nav > ul > li:nth-last-of-type(1) {
+    padding-right: 1.3em;
+    border-top-right-radius: var( --size-icons );
+    border-bottom-right-radius: var( --size-icons );
+}
+
+nav > ul {
+    flex-direction: row;
+}
+
+div#container-linso a {
+    font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER __________________________________________________________________________________________________________________________________________________________________________________________ */
+
+
+/* HEADER */
+header {
+    height: var(--Armazem--size-header-height-desktop);
+    perspective: 1000px;
+    position: relative;
+    overflow: visible;
+}
+
+
+
+
+
+
+
+/*  TUDO ACIMA DESSA LINHA ESTÁ QUEBRADO  */
+
+
+
+
+
+
+
+/* MAIN ____________________________________________________________________________________________________________________________________________________________________________________________ */
+
+
+/* MAIN */
+main {
+    border-top: 2px solid #100000;
+    background: var(--bg-main-gradient-effect-02);
+    perspective: 10px;
+}
+
+    main > * {
+        max-width: var( --size-max-wdith-content );
     }
 
-    #night-parallax
-    {
-        background: url('../bg-night.jpg') no-repeat center;
-        background-size: cover;
-        height: 150%; /* Mantém maior que o header */
+
+
+
+
+
+
+div.bg-dark {
+    background-color: var(--color-darkest-black-01);
+    background-image: linear-gradient( 180deg, #040408, #000000 );
+    box-shadow: 0em 0.5em 3em var(--color-darkest-black-02);
+}
+
+
+
+
+
+
+
+div#apres * {
+    text-align: left;
+}
+
+div#apres {
+    flex-direction: row;
+    border-top: 2px solid var(--color-medium-black-02);
+    border-bottom: 2px solid var(--color-medium-black-02);
+}
+
+    div#apres > div {
         width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        /* O TRUQUE: Afasta no eixo Z para mover mais devagar que o scroll */
-        /* E aumenta o scale para compensar o recuo da perspectiva */
-        transform: translateZ(-5px) scale(1.6);
-        z-index: 1;
+        max-width: 18.5em;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-/* Barra Social ------------------------------------------------------------------------------------------------------ */
-
-    div#social-bar
-    {
-        max-width: 100%;
-        margin: 2.5em auto;
-        border: none;
-        top: 1em;
+    div#apres h1 {
+        font-size: 1.85em;
     }
-    div#bg-social-bar
-    {
-        width: calc(100% - 2em);
-        max-width: 75em;
-        padding: 0.1em;
-        border-radius: var(--social-element-size);
-    }
-
-
-
-
-    div#container-burge { display: none; }
-    div#container-linso { display: flex; }
-
-
-
-
-/* ⚪ Links Sociais */
-    nav > ul > li:nth-of-type(1)
-    {
-        padding-left: 1.3em;
-        border-top-left-radius: var(--social-element-size);
-        border-bottom-left-radius: var(--social-element-size);
-    }
-    nav > ul > li:nth-last-of-type(1)
-    {
-        padding-right: 1.3em;
-        border-top-right-radius: var(--social-element-size);
-        border-bottom-right-radius: var(--social-element-size);
-    }
-    nav > ul
-    {
-        flex-direction: row;
-    } 
-    div#container-linso a
-    {
-        font-size: 1em;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-main {  /* Main ------------------------------------------------------------------------------------------------------------------------ */
-border-top: 2px solid #100000;
-background: var(--bg-main-gradient-effect-02);
-} main > * {
-max-width: 64em;
-}
-
-
-
-
-div.bg-dark {  /* Fundo Escuro */
-background-color: var(--color-darkest-black-01);
-background-image:
-linear-gradient(
-180deg ,
-#040408 ,
-#000000
-);
-box-shadow: 0em 0.5em 3em var(--color-darkest-black-02);
-}
-
-
-
-
-
-
-
-div#apres * {  /* Section Apresentação */
-text-align: left;
-} div#apres {
-flex-direction: row;
-border-top: 2px solid var(--color-medium-black-02);
-border-bottom: 2px solid var(--color-medium-black-02);
-} div#apres > div {
-width: 100%;
-max-width: 18.5em;
-} div#apres h1 {
-font-size: 1.85em;
-}
-
-
-
-
-
-
-
-
-div.container-study-elements {  /* Section Study */
-max-width: 64em;
-gap: 0.8em;
-border: none;
-box-shadow: none;
-flex-direction: column-reverse;
-} div.study > div.container-study-elements > div {
-border-radius: 1em;
-border-left: 1.5px solid var(--color-medium-black-02);
-border-right: 1.5px solid var(--color-medium-black-02);
-} div.container-study-elements > div:nth-of-type(2) > div:nth-of-type(2) {
-background-image: var(--container-study-elements-gradient-effect-02);
-} div.container-study-elements > div:nth-of-type(2) {
-height: 14em;
-}
-
-
-
-div.container-study-elements div:nth-of-type(1) a { display: block; }
-div.container-study-elements div:nth-of-type(2) a { display: none; }
-
-
-
-
-
-div.study.two {
-flex-direction: row;
-gap: 0.8em;
-} div.study.two > div {
-background-color: var(--color-darkest-black-02);
-gap: 0em;
-} div.study.two > div > div {
-border-radius: 0em;
-} div.study.two > div > div:nth-of-type(2) {
-border-bottom: 1px solid var(--color-dark-grey-01);
-height: 10em;
-}
-
-
-
-
-
-
-footer > * { /* Footer ------------------------------------------------------------------------------------------------------------------------------ */
-width: 85%;
-max-width: 75em;
-margin: auto;
-} div#notes {
-display: grid;
-grid-template-columns: repeat( 3 , 30% );
-gap: 05%;
-}

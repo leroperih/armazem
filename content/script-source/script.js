@@ -1,19 +1,41 @@
 
 
+// GLOBAL VARIABLES _______________________________________________________________________________
+
+const botao = document.querySelector('div#container-burge');
+const linso = document.querySelector("div#container-linso");
+const night = document.getElementById('wrap-parallax');
+const parallaxText = document.getElementById('parallax-text');
+const socialBar = document.getElementById('social-bar');
+const shield = document.getElementById('shield');
+
+const style = getComputedStyle(document.documentElement);
+const sizeIcons = parseInt(style.getPropertyValue('--size-icons')); // Fallback 48px
+const sizeHeaderArmazem = parseInt(style.getPropertyValue('--Armazem--size-header-height'));
+const minSize = sizeIcons || 48; // Fallback 48px
+const maxSize = 128; // Tamanho máximo (8em aprox.)
+
+
+
+
+
+
 
 // MENU BURGER ____________________________________________________________________________________
 
-botao = document.querySelector('div#container-burge');
-linso = document.querySelector("div#container-linso");
-
-document.addEventListener('click', function(evento) {
-    if (!botao.contains(evento.target) && !linso.contains(evento.target)) {
-      linso.classList.remove('openBurge');
+document.addEventListener('click', function (evento) {
+    // safety: ensure elements exist before accessing contains/classList
+    const clickedInsideBotao = botao && botao.contains(evento.target);
+    const clickedInsideLinso = linso && linso.contains(evento.target);
+    if (!clickedInsideBotao && !clickedInsideLinso) {
+        if (linso && linso.classList)
+            linso.classList.remove('openBurge');
     }
 })
 
 function ClickBurge() {
-    linso.classList.toggle('openBurge');
+    if (linso && linso.classList)
+        linso.classList.toggle('openBurge');
 }
 
 
@@ -21,25 +43,45 @@ function ClickBurge() {
 
 
 
-// PARALLAX EFFECT ________________________________________________________________________________
 
-// O script deve ser colocado antes do fechamento do </body>
-window.addEventListener('scroll', function () {
 
-    const scrollValue = window.scrollY;
-    const bg = document.getElementById('night-parallax');
-    const text = document.getElementById('parallax-text');
 
-    // Move o fundo 0.5px para cada 1px de scroll (mais lento)
-    bg.style.transform = `translateY(${scrollValue * 0.5}px)`;
 
-    // text.style.transform = `translateY(${scrollValue}px)`;
 
-});
+
+// Triggers The Parallax Effect
 
 window.addEventListener('load', () => {
 
-    window.scrollBy( 0 , 1 );
-    window.scrollBy( 0 , -1 );
+    window.scrollBy(0, 1);
+    window.scrollBy(0, -1);
 
 });
+
+
+// Simple scroll-based parallax handler
+window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY || window.pageYOffset;
+
+    if (night) {
+        // move background slower than scroll for depth effect
+        night.style.transform = `translateY(${scrolled * 0.2}px) scale(1.1)`;
+    }
+
+    if (parallaxText) {
+        // move title slightly faster for foreground effect
+        parallaxText.style.transform = `translateY(${100 + scrolled * 0.18}px)`;
+    }
+
+    if (shield) {
+        // move shield
+        shield.style.transform = `translateY(${scrolled}px)`;
+    }
+
+});
+
+
+
+
+
+

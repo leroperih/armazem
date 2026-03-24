@@ -1,283 +1,261 @@
 
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/* LESRO PROJECT: O CSS geral e para telas pequenas do armazem. */
+/* Annotation: Coloque Cogumelos em Coisas! */
 
 
-    @font-face
-    {
-        font-family: "Angel";
-        src: url("../Angel.TTF");
-    }
-
-/* Colocar cogus no título. */
-
-/* TELAS PEQUENAS */
+/* MOBILE DEVICES */
 
 
 
 :root {
-
-
-
-    --size-icons: 3em;
-
-
-    --transition-time-01: 0.15s;
-
-
-    --hover-color-01: #ffffff44;
-    --hover-color-02: #ffffff22;
-    --hover-color-03: #ffffff08;
-    --default-color-grey-01: #606060;
-    --default-color-grey-02: #60606060;
-    --default-color-red-01: #f00000;
-    --default-color-red-02: #f0000088;
-
-    --color-darkest-black-01: #000000;
-    --color-darkest-black-02: #000000f0;
-    --color-darkest-black-03: #000000c0;
-    --color-darkest-black-04: #00000080;
-    --color-dark-black-01: #050505;
-    --color-dark-black-02: #05050580;
-    --color-dark-black-05: #05050528;
-    --color-medium-black-01: #161616;
-    --color-medium-black-02: #16161680;
-    --color-medium-black-03: #16161660;
-    --color-light-black-01: #222222;
-    --color-light-black-02: #22222288;
-    --color-light-black-03: #22222244;
-    --color-darkest-grey-01: #282828;
-    --color-dark-grey-01: #2f2f2f;
-    --color-dark-grey-02: #2f2f2f80;
-    --color-medium-grey-01: #484848;
-    --color-medium-grey-02: #48484880;
-    --color-medium-grey-03: #48484844;
-    --color-light-grey-01: #b0b0b0;
-    --color-light-grey-02: #b0b0b080;
-    --color-light-white-01: #f0f0f0;
-    --color-light-white-02: #f0f0f0a0;
-    --color-lighter-white-01: #ffffff;
-    --color-lighter-white-02: #ffffffd0;
-    --color-lighter-white-03: #ffffffb0;
-
-
-    --color-study-school-01: #ff8800;
-    --color-study-school-02: #ff8800b0;
-    --color-study-python-01: #ffcc00;
-    --color-study-python-02: #ffcc00b0;
-    --color-study-design-01: #8800bb;
-    --color-study-design-02: #8800bbb0;
-    --color-study-html-01: #4444ff;
-    --color-study-html-02: #4444ffb0;
-    --color-study-cyber-01: #ff7f50;
-    --color-study-cyber-02: #ff7f50b0;
-    --color-study-css-01: #ff00ff;
-    --color-study-css-02: #ff00ffb0;
-    --color-study-cpp-01: #00ffee;
-    --color-study-cpp-02: #00ffeeb0;
-    --color-study-art-01: #ff4400;
-    --color-study-art-02: #ff4400b0;
-    --color-study-cps-01: #ff5500;
-    --color-study-cps-02: #ff5500b0;
-    --color-study-js-01: #ffee40;
-    --color-study-js-02: #ffee40b0;
-    --color-study-math-01: #00ff80;
-    --color-study-math-02: #00ff80b0;
-
-
-
-    --lateral-dark-gradient-effect-01:
-        linear-gradient(
-        90deg ,
-        #000000e0 ,
-        transparent ,
-        #000000e0
-        );
-
-    --bg-main-gradient-effect-01:
-        linear-gradient(
-        180deg,
-        #0a0a0e 0em ,
-        #0a0a0e 3em ,
-        #070707 30vh ,
-        #060606 35vh ,
-        #050505 50vh
-        );
-
-    --bg-main-gradient-effect-02:
-        linear-gradient(
-        180deg,
-        #0a0a0d 0em ,
-        #070707 20vh ,
-        #060606 40vh ,
-        #050505 60vh
-        );
-
-
-    --container-study-elements-gradient-effect-01:
-        linear-gradient(
-        160deg ,
-        #000000 00%,
-        #000000dd 20%,
-        #000000bb 40%,
-        #00000088 60%,
-        #00000044 80%,
-        transparent
-        );
-
-
-    --container-study-elements-gradient-effect-02:
-        linear-gradient(
-        130deg ,
-        #000000ee 00%,
-        #000000aa 20%,
-        #00000088 40%,
-        #00000066 60%,
-        #00000044 80%,
-        transparent
-        );
-
-
-
-  --fonte-animatic: 'Amatic SC', cursive;
-  --font-apple: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-angel: "Angel", sans-serif;
-  --font-lesro-01: 'Cinzel', serif;
-  --font-notes: 'Indie Flower', cursive;
-
+    --Armazem--size-header-height-desktop: 80vh;
+    --Armazem--size-header-height-desktop-negative: -80vh;
+    --Armazem--size-header-height-mobile: 65vh;
+    --Armazem--size-header-height-mobile-negative: -65vh;
+    --Armazem--size-icon-maximized: 6em;
+    =
+    /* A generic header height variable (falls back to desktop value) used by scripts */
+    --Armazem--size-header-height: var(--Armazem--size-header-height-desktop);
 }
 
 
 
-    div#container-linso.openBurge
-    {
+
+
+
+
+
+
+
+
+
+
+
+/* SOCIAL-BAR ____________________________________________________________________________________________________________________________________________________________________ */
+
+
+/* SOCIAL-BAR */
+div#social-bar {
+    width: 100%;
+    position: fixed;
+    top: 2.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1200px;
+    z-index: 10;
+}
+
+    div#social-bar * {
         display: flex;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* HEADER -------------------------------------------------------------------------------------------------------------------- */
-
-
-    header
-    {
-        height: 12em;
-    }
-
-
-
-
-
-/* HEADER -> PARALLAX EFFECT _________________________________________________________________________________________________ */
-
-
-    #night-parallax, #parallax-text
-    {
-        will-change: transform;
-        backface-visibility: hidden;
-    }
-
-    #wrap-parallax
-    {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
-        background-size: cover;
+        transition-duration: 0.25s;
     }
 
-    #night_parallax
-    {
-        top: 0em;
-        left: 0em;
-        width: 100%;
-        height: 120%;
-        position: absolute;
+div#bg-social-bar {
+    width: 90em;
+    height: var( --size-icons );
+    position: relative; /* allow children to be positioned relative to this box */
+    overflow: visible; /* allow waifu to overflow vertically */
+    margin: auto;
+    padding: 0.5em;
+    justify-content: space-between;
+    background-color: var( --color-darkest-black-02 );
+    box-shadow: 0em 0.5em 1.25em var( --color-darkest-black-03 );
+    border: solid 2px var( --color-medium-grey-02 );
+    border-radius: 1em !important;
+}
+
+    div#bg-social-bar > div * {
+        align-items: center;
+    }
+
+/* SOCIAL-BAR -> WAIFU-ICON */
+
+div#first-social-bg-divider {
+    height: 2em;
+    position: relative; /* container for absolutely-positioned waifu */
+    display: flex;
+    align-items: normal;
+    transform: translateX(-1em);
+}
+
+    div#first-social-bg-divider * {
+        align-items: center;
+    }
+
+div#container-waifu {
+    position: absolute;
+    left: 0.25em;
+    top: 50%;
+    transform: translateY(-60%);
+    height: calc(var(--size-icons) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    z-index: 4;
+}
+
+    div#container-waifu img {
+        width: calc(var(--size-icons) * 2);
+        height: calc(var(--size-icons) * 2);
+        border: solid 2px var( --color-light-white-02 );
+        border-radius: 50%;
         object-fit: cover;
-        z-index: 1;
-        background: url('../../../content/content/bg-night.jpg') center center no-repeat;
-        background-size: cover;
-        display: block !important;
+        display: block;
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.6);
     }
 
-    /*
-    #parallax-text
-    {
-        position: absolute;
-        z-index: 2;
-        color: var(--default-color-red-02);
-        font-size: 4rem;
-        font-weight: bolder;
-    }
-    */
-
-    header div:nth-of-type(2)
-    {
-        top: 0em;
-        left: 0em;
-        position: absolute;
-        width: 100%; height: 100%;
-        bottom: 0em;
-        background-image: var(--lateral-dark-gradient-effect-01);
-        box-shadow:
-        inset 0em 0em 1.5em var(--color-darkest-black-01),
-        inset 0em 0em 3.5em var(--color-darkest-black-01);
-        z-index: 2;
+    div#container-waifu a:hover img {
+        width: calc(var(--size-icons) * 2.2);
+        height: calc(var(--size-icons) * 2.2);
     }
 
+/* ensure notes do not overlap the waifu image */
+div#first-social-bg-divider #container-notes {
+    margin-left: calc(var(--size-icons) * 2.2);
+}
 
+/* SOCIAL-BAR -> SOCIAL-LINKS */
+div#social-bar ul {
+    padding-right: 0.5em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-/* MAIN ______________________________________________________________________________________________________________________ */
-
-
-    main
-    {
-        padding-bottom: 2.5em;
-        background: var(--bg-main-gradient-effect-01);
+    div#social-bar ul li {
+        margin: 0em 0.5em;
     }
 
-    main > *
-    {
+        div#social-bar ul li:nth-of-type(even) {
+            color: red;
+        }
+
+#social-bar ul li a:hover {
+    color: var( --color-lighter-white-01 );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER ________________________________________________________________________________________________________________________________________________________________________________ */
+
+
+/* HEADER */
+header {
+    display: block;
+    position: relative;
+    height: var(--Armazem--size-header-height-desktop);
+}
+
+
+/* HEADER -> PARALLAX EFFECT _____________________________________________________________________________________________________________________________________________________________ */
+
+
+/* PARALLAX */
+#night-parallax, #parallax-text {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* PARALLAX WRAPPER */
+#wrap-parallax {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../../../content/content/bg-night.jpg') no-repeat center center fixed;
+    background-size: cover;
+    transform-style: preserve-3d;
+    position: relative;
+    overflow: hidden;
+}
+
+/* PARALLAX BACKGROUND */
+#night-parallax {
+    display: none;
+}
+
+/* PARALLAX TEXT */
+#parallax-text {
+    position: relative;
+    color: #b22b2b;
+    font-size: 5rem;
+    font-weight: bolder;
+    z-index: 3;
+}
+
+/* SHILD */
+header div:nth-of-type(2) {
+    top: 0em;
+    left: 0em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: var(--lateral-dark-gradient-effect-01);
+    box-shadow: inset 0em 0em 1.5em var(--color-darkest-black-01), inset 0em 0em 3.5em var(--color-darkest-black-01);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+/* TUDO ACIMA DESSA LINHA ESTÁ QUEBRADO */
+
+
+
+
+
+
+
+
+
+
+
+/* MAIN __________________________________________________________________________________________________________________________________________________________________________________ */
+
+
+main {
+    transition-duration: 0s;
+    min-height: 200vh;
+    padding-bottom: 5em;
+    background: var(--bg-main-gradient-effect-01);
+    z-index: 5;
+}
+
+    main > * {
         border-radius: 0.75em;
         box-sizing: border-box;
         width: 100%;
@@ -288,467 +266,55 @@
 
 
 
+/* MAIN -> PRESENTATION __________________________________________________________________________________________________________________________________________________________________ */
 
+/* PRESENTATION */
+div.bg-dark {
+    width: auto;
+    max-width: 92.5%;
+    margin: 1em auto;
+    padding: 1em;
+    margin-top: 3em;
+}
 
+div.titu-section {
+    margin-top: 3.5em;
+}
 
-
-
-/* MAIN -> SOCIAL BAR ________________________________________________________________________________________________________ */
-
-    /* SOCIAL BAR */
-    div#social-bar
-    {
-        padding: 0em;
-        position: sticky;
-        top: 0em;
-        z-index: +10;
-        margin: 0em auto;
-        border-top: 2px solid #100000;
-        border-bottom: 2px solid #100000;
-    }
-
-    div#social-bar *
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    div#bg-social-bar
-    {
-        margin: auto;
-        padding: 0.35em;
-        justify-content: space-between;
-        background-color: var(--color-darkest-black-03);
-        box-shadow: 0em 0.5em 1.25em var(--color-darkest-black-03);
-    }
-
-    div#bg-social-bar > div
-    {
-        position: relative;
-    }
-
-    div#bg-social-bar > div > div
-    {
-        height: var(--size-icons);
-        border: 1.5px solid var(--color-medium-black-02);
-        border-radius: var(--size-icons);
-    }
-
-    /* SOCIAL ICON */
-    div.container-icon
-    {
-        width: var(--size-icons);
-    }
-
-    div.container-icon *
-    {
-        width: 100%;
-        height: 100%;
-        transition-duration: var(--transition-time-01);
-    }
-
-    div.container-icon:hover
-    {
-        background-color: var(--color-darkes-black-02);
-        box-shadow: inset 0em 0em 0.8em var(--hover-color-03);
-    }
-
-    div.container-icon:hover > *
-    {
-        width: 90%; height: 90%;
-    }
-
-    /* BURGER */
-    div#container-burge { display: flex; }
-    div#container-linso { display: none; }
-    div#container-notes { display: none; }
-
-    div#container-burge > div > div
-    {
-        width: 64%; height: 64%;
-        justify-content: space-around;
-        flex-direction: column;
-    }
-    div#container-burge > div > div *
-    {
-        width: 85%; height: 0.1em;
-        background-color: var(--default-color-red-01);
-    }
-
-    /* LINKS */
-    div#social-bar div#container-linso
-    {
-        border: 1px solid var(--color-dark-grey-02);
-        overflow: hidden;
-    }
-
-    div#container-linso ul *
-    {
-        height: var(--size-icons);
-        transition-duration: 0.25s;
-    }
-
-    nav > ul
-    {
-        background-color: var(--color-light-black-03);
-        flex-direction: column;
-    }
-
-    nav > ul > li
-    {
-        box-sizing: border-box;
-        padding: 0em 0.8em;
-    }
-
-    div#container-linso a
-    {
-        font-size: 1.3em;
-        font-weight: normal;
-        height: fit-content;
-        transform: translateY(-0.1em);
-    }
-
-    /* LINKS HOVER */
-    nav > ul > li:hover
-    {
-        box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-01);
-    }
-
-    div#container-linso li:hover a
-    {
-        color: var(--color-lighter-white-02);
-        text-shadow: 0em 0em 0.25em var(--color-darkest-black-01);
-    }
-
-
-
-
-
-
-
-/* MAIN -> COLOR SCHEME ______________________________________________________________________________________________________ */
-
-
-    #art h1 { color: var(--color-study-art-02);}
-    #design h1 { color: var(--color-study-design-02);}
-    #html h1 { color: var(--color-study-html-02);}
-    #css h1 { color: var(--color-study-css-02);}
-    #js h1 { color: var(--color-study-js-02);}
-    #python h1 { color: var(--color-study-python-02);}
-    #cpp h1 { color: var(--color-study-cpp-02);}
-    #school h1 { color: var(--color-study-school-02);}
-    #cps h1 { color: var(--color-study-cps-02);}
-    #ime-kana h1 { color: var(--color-study-kana-02);}
-    #math h1 { color: var(--color-study-math-02);}
-    #entertainment h1 { color: var(--color-study-art-02);}
-    #cyber h1 { color: var(--color-study-cyber-02);}
-
-
-
-
-
-
-/* MAIN -> PRESENTATION ______________________________________________________________________________________________________ */
-
-
-    div.bg-dark
-    {
-        width: auto;
-        max-width: 92.5%;
-        margin: 1em auto;
-        padding: 1em;
-    }
-
-    div.titu-section
-    {
-        margin-top: 3.5em;
-    }
-
-    div.titu-section *
-    {
+    div.titu-section * {
         border-bottom: 1.5px solid var(--color-light-grey-02);
         font-size: 1.6em;
         text-indent: 0.4em;
     }
 
-    div#apres div
-    , div#apres {  /* Apresentação */
+div#apres div, div#apres {
     color: var(--color-light-grey-02);
     text-align: center;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    } div#apres {
+}
+
+div#apres {
     padding: 3em 1em;
     gap: 1em;
-    } div#apres > div:nth-of-type(1) {
-    width: 60%;
-    } div#apres > div:nth-of-type(2) {
-    padding: 0.5em;
-    gap: 0.5em;
-    } div#apres img {
-    width: 100%;
-    } div#apres h1 {
-    line-height: 1.1em;
-    font-weight: normal;
+}
+
+    div#apres > div:nth-of-type(1) {
+        width: 60%;
     }
 
-
-
-
-
-
-
-
-/* MAIN -> STUDY CONTENT _________________________________________________________________________________________________ */
-
-
-    div.study *
-    {  /* Study */
-        color: var(--color-light-white-02);
-        transition-duration: var(--transition-time-01);
-        display: flex;
-        justify-content: space-between;
-        overflow: hidden;
+    div#apres > div:nth-of-type(2) {
+        padding: 0.5em;
+        gap: 0.5em;
     }
 
-    div.study h1
-    {
-        font-weight: bolder;
-    }
-    
-    div.container-study-elements
-    {
-        position: relative;
-        flex-direction: column;
-        border-radius: 1em;
-        box-shadow: 0em 0em 1.2em var(--color-medium-black-02);
-        border-left: 1.5px solid var(--color-medium-black-03);
-        border-right: 1.5px solid var(--color-medium-black-03);
-    }
-    
-    div.container-study-elements div
-    {
-        width: 100%; height: 100%;
-        position: relative;
-    }
-    
-    div.container-study-elements > div:nth-of-type(1)
-    {
-        box-sizing: border-box;
-        padding: 0.25em 1em;
-        height: 3.5em;
-        background-color: var(--color-darkest-black-03);
-        border-bottom: 1px solid var(--color-medium-black-02);
-    }
-    
-    div.container-study-elements > div:nth-of-type(2)
-    {
-        height: 16em;
-    }
-    
-    div.container-study-elements > div:nth-of-type(2) > div
-    {
-        box-sizing: border-box;
-        padding: 1.5em;
-        position: absolute;
-        bottom: 0em;
-        background-image: var(--container-study-elements-gradient-effect-01);
-        box-shadow: inset 0em 0em 3.5em var(--color-darkest-black-02);
-    }
-    
-    div.container-study-elements img
-    {
-        position: absolute;
-        width: 100%; height: 100%;
-        object-fit: cover;
-    }
-    
-    div.container-study-elements p
-    {
-        font-size: 1em;
-    }
-    
-    div.container-study-elements a
-    {
-        background-color: var(--color-light-black-03);
-        margin: 0.35em;
-        font-size: 1.35em;
-        padding: 0.2em 1em;
-        border: 1.5px solid var(--color-dark-grey-02);
-        border-radius: 0.6em;
-        position: absolute;
-        bottom: 0em; right: 0em;
-    }
-    
-    div.container-study-elements a:hover
-    {
-        background-color: var(--color-light-black-02);
-        box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-01);
-    }
-
-
-    /*
-    div.container-study-elements:hover img
-    {
-        animation: AnimateStudyIMG 2s normal linear;
-        transition-duration: 2s;
-    }
-    */
-
-    div.container-study-elements div:nth-of-type(1) a { display: none; }
-    div.container-study-elements div:nth-of-type(2) a { display: block; }
-
-
-    div.study.two div.container-study-elements div:nth-of-type(1) a { display: block; }
-    div.study.two div.container-study-elements div:nth-of-type(2) a { display: none; }
-
-
-
-    div.study.two
-    {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    }
-    
-    div.study.two > *
-    {
-    width: 100%;
-    }
-    
-    div.study.two > div > div:nth-of-type(2)
-    {
-    height: 10em;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FOOTER ____________________________________________________________________________________________________________________ */
-
-
-    footer
-    {  
-        min-height: 8em;
-        padding: 1em;
-        background-color: var(--color-light-black-03);
-    }
-    
-    footer *
-    {
-        color: var(--color-lighter-white-02);
-        font-family: var(--font-notes);
-    }
-    
-    footer h3
-    {
-        text-align: center;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* SUB 600px _________________________________________________________________________________________________________________ */
-
-    @media screen and (max-width: 600px)
-    {
-
-
-    div#container-linso.openBurge
-    {
-        padding: 0.2em;
-        width: 8.5em;
-        position: absolute;
-        right: calc(100% + 0.5em);
-        top: 0em;
-        height: fit-content;
-        border-radius: 0.75em;
-    }
-    
-    div#container-linso.openBurge *
-    {
+    div#apres img {
         width: 100%;
     }
-    
-    div#container-linso.openBurge ul
-    {
-        background-color: var(--color-dark-black-05);
-        gap: 0.15em;
-    }
-    
-    div#container-linso.openBurge li
-    {
-        border-radius: 0.45em;
-        width: 100%;
-    }
-    
-    nav > ul > li:hover
-    {
-        box-shadow: inset 0em 0em 0.8em var(--hover-color-02);
-    } 
 
-
-    div.container-study-elements > div:nth-of-type(2) > div
-    {
-        padding-top: 5em;
-    }
-    
-    div.container-study-elements > div:nth-of-type(1)
-    {
-        z-index: +1;
-        position: absolute;
-        width: 100%;
-        top: 0em;
-        right: 0em;
-    }
-
-
-
-    }
-
-
-
-    @keyframes AnimateStudyIMG
-    {
-        0% { transform: scale(1) rotate(0deg); }
-        10% { transform: scale(1.1) rotate(3deg); }
-        100% { transform: scale(1) rotate(0deg); }
+    div#apres h1 {
+        line-height: 1.1em;
+        font-weight: normal;
     }
