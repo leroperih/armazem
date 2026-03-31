@@ -91,7 +91,7 @@ div#container-waifu {
     position: absolute;
     left: 0.25em;
     top: 50%;
-    transform: translateY(-60%);
+    transform: translateY(-50%);
     height: calc(var(--size-icons) * 2);
     display: flex;
     align-items: center;
