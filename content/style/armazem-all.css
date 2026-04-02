@@ -101,8 +101,8 @@ div#container-waifu {
 }
 
     div#container-waifu img {
-        width: calc(var(--size-icons) * 2);
-        height: calc(var(--size-icons) * 2);
+        width: calc(var(--size-icons) * 1.6);
+        height: calc(var(--size-icons) * 1.6);
         border: solid 2px var( --color-light-white-02 );
         border-radius: 50%;
         object-fit: cover;
@@ -110,14 +110,10 @@ div#container-waifu {
         box-shadow: 0 0 0.5em rgba(0,0,0,0.6);
     }
 
-    div#container-waifu a:hover img {
-        width: calc(var(--size-icons) * 2.2);
-        height: calc(var(--size-icons) * 2.2);
-    }
-
 /* ensure notes do not overlap the waifu image */
 div#first-social-bg-divider #container-notes {
-    margin-left: calc(var(--size-icons) * 2.2);
+    margin-left: calc(var(--size-icons) * 1.6);
+    align-items: end !important;
 }
 
 /* SOCIAL-BAR -> SOCIAL-LINKS */
@@ -251,8 +247,8 @@ main {
     transition-duration: 0s;
     min-height: 200vh;
     padding-bottom: 5em;
-    background: var(--bg-main-gradient-effect-01);
-    z-index: 5;
+    background-image: var(--bg-main-gradient-effect-01);
+    z-index: 50;
 }
 
     main > * {
@@ -317,4 +313,36 @@ div#apres {
     div#apres h1 {
         line-height: 1.1em;
         font-weight: normal;
+    }
+
+
+
+
+
+
+
+
+
+
+    div#anime-girl , div#anime-shield
+    {
+        position: absolute;
+        width: 100%;
+        max-width: none;
+        height: 100vh;
+        top: 0em;
+        left: 0em;
+        z-index: -100;
+    }
+
+    div#anime-girl
+    {
+        background: url('../../../content/content/bg-anime.png') no-repeat fixed center right;
+        background-size: cover;
+    }
+
+    div#anime-shield
+    {
+        background-color: #000000aa;
+        background-size: cover;
     }
