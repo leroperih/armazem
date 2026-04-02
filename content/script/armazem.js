@@ -2,8 +2,6 @@
 
 // GLOBAL VARIABLES _______________________________________________________________________________
 
-const anime_bg = document.querySelector("div#anime-girl");
-const anime_shield = document.querySelector("div#anime-shield");
 
 const botao = document.querySelector('div#container-burge');
 const linso = document.querySelector("div#container-linso");
@@ -76,26 +74,6 @@ window.addEventListener('scroll', () => {
         parallaxText.style.transform = `translateY(${100 + scrolled * 0.18}px)`;
     }
 
-    if (shield) {
-        // move shield
-        shield.style.transform = `translateY(${scrolled}px)`;
-    }
-
-    if (window.scrollY > 820)
-    {
-        anime_bg.style.top = `${(window.scrollY - 820)}px`;
-    }
-    else
-    {
-        anime_bg.style.top = `0em`;
-    }
-
-    if (window.scrollY > 820) {
-        anime_shield.style.top = `${(window.scrollY - 820)}px`;
-    }
-    else {
-        anime_shield.style.top = `0em`;
-    }
 
 
 });

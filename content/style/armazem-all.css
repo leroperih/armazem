@@ -329,7 +329,7 @@ div#apres {
         position: absolute;
         width: 100%;
         max-width: none;
-        height: 100vh;
+        height: 100%;
         top: 0em;
         left: 0em;
         z-index: -100;
