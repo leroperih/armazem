@@ -16,7 +16,6 @@
     --Armazem--size-header-height-mobile: 65vh;
     --Armazem--size-header-height-mobile-negative: -65vh;
     --Armazem--size-icon-maximized: 6em;
-    =
     /* A generic header height variable (falls back to desktop value) used by scripts */
     --Armazem--size-header-height: var(--Armazem--size-header-height-desktop);
 }
@@ -42,8 +41,7 @@ div#social-bar {
     width: 100%;
     position: fixed;
     top: 2.5em;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 5%;
     width: 95%;
     max-width: 1200px;
     z-index: 10;
@@ -187,7 +185,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../../../content/content/bg-night.jpg') no-repeat center center fixed;
+    background: url('../../../content/content/img/bg-night.jpg') no-repeat center center fixed;
     background-size: cover;
     transform-style: preserve-3d;
     position: relative;
@@ -243,19 +241,21 @@ header div:nth-of-type(2) {
 /* MAIN __________________________________________________________________________________________________________________________________________________________________________________ */
 
 
-main {
-    transition-duration: 0s;
-    min-height: 200vh;
-    padding-bottom: 5em;
-    background-image: var(--bg-main-gradient-effect-01);
-    z-index: 50;
-}
+    main
+    {
+        transition-duration: 0s;
+        min-height: 200vh;
+        padding-bottom: 5em;
+        background-image: var(--bg-main-gradient-effect-01);
+        z-index: 50;
+    }
 
-    main > * {
+    main > *
+    {
         border-radius: 0.75em;
         box-sizing: border-box;
         width: 100%;
-        margin: auto;
+        margin-left: 0em;
         padding: 1em;
     }
 
@@ -264,20 +264,23 @@ main {
 
 /* MAIN -> PRESENTATION __________________________________________________________________________________________________________________________________________________________________ */
 
-/* PRESENTATION */
-div.bg-dark {
-    width: auto;
-    max-width: 92.5%;
-    margin: 1em auto;
-    padding: 1em;
-    margin-top: 3em;
-}
+    /* PRESENTATION */
+    div.bg-dark
+    {
+        width: auto;
+        max-width: 92.5%;
+        margin: 1em auto;
+        padding: 1em;
+        margin-top: 3em;
+    }
 
-div.titu-section {
-    margin-top: 3.5em;
-}
+    div.titu-section
+    {
+        margin-top: 3.5em;
+    }
 
-    div.titu-section * {
+    div.titu-section *
+    {
         border-bottom: 1.5px solid var(--color-light-grey-02);
         font-size: 1.6em;
         text-indent: 0.4em;
@@ -326,6 +329,7 @@ div#apres {
 
     div#anime-girl , div#anime-shield
     {
+        margin: auto;
         position: absolute;
         width: 100%;
         max-width: none;
@@ -337,8 +341,8 @@ div#apres {
 
     div#anime-girl
     {
-        background: url('../../../content/content/bg-anime-01.png') no-repeat fixed center right;
-        background-size: cover;
+        background: #000000 url('../../../content/content/img/bg-anime-01.png') no-repeat fixed bottom right;
+        background-size: 80%;
     }
 
     div#anime-shield

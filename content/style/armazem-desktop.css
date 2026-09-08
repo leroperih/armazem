@@ -103,7 +103,8 @@ main {
 }
 
     main > * {
-        max-width: var( --size-max-wdith-content );
+        margin-left: max( 2em , 10% );
+        max-width: min( var( --size-max-wdith-content ) , 100% - 3.5em );
     }
 
 
