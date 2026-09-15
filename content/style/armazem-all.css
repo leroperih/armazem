@@ -127,12 +127,6 @@ div#social-bar ul {
             color: red;
         }
 
-#social-bar ul li a:hover {
-    color: var( --color-lighter-white-01 );
-}
-
-
-
 
 
 
