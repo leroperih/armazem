@@ -12,47 +12,55 @@
 /* SOCIAL-BAR ____________________________________________________________________________________________________________________________________________________________________________ */
 
 
-/* SOCIAL-BAR */
-div#bg-social-bar {
-    box-sizing: border-box;
-    width: calc(100% - 2em);
-    max-width: 75em;
-    padding: 0.1em;
-    border-radius: var( --size-icons );
-}
+    /* SOCIAL-BAR */
 
-div#container-notes > p {
-    text-indent: 1.5em;
-    transform: scale(132%)
-}
+    div#bg-social-bar
+    {
+        box-sizing: border-box;
+        max-width: 75em;
+        padding: 0.1em;
+        background-color: var( --color-darkest-black-02 );
+        box-shadow: 0em 0.5em 1.25em var( --color-darkest-black-03 );
+        border: solid 2px var( --color-medium-grey-02 );
+        border-radius: 1em !important;
+    }
 
-div#container-burge {
-    display: none;
-}
+    div#container-notes > p
+    {
+        overflow: hidden;
+        height: var( --size-social );
+        text-indent: 1.5em;
+        transform: scale(132%)
+    }
 
-div#container-linso {
-    display: flex;
-}
+    div#container-linso
+    {
+        display: flex;
+    }
 
-nav > ul > li:nth-of-type(1) {
-    padding-left: 1.3em;
-    border-top-left-radius: var( --size-icons );
-    border-bottom-left-radius: var( --size-icons );
-}
+    nav > ul > li:nth-of-type(1)
+    {
+        padding-left: 1.3em;
+        border-top-left-radius: var( --size-icons );
+        border-bottom-left-radius: var( --size-icons );
+    }
 
-nav > ul > li:nth-last-of-type(1) {
-    padding-right: 1.3em;
-    border-top-right-radius: var( --size-icons );
-    border-bottom-right-radius: var( --size-icons );
-}
+    nav > ul > li:nth-last-of-type(1)
+    {
+        padding-right: 1.3em;
+        border-top-right-radius: var( --size-icons );
+        border-bottom-right-radius: var( --size-icons );
+    }
 
-nav > ul {
-    flex-direction: row;
-}
+    nav > ul
+    {
+        flex-direction: row;
+    }
 
-div#container-linso a {
-    font-size: 1em;
-}
+    div#container-linso a
+    {
+        font-size: 1em;
+    }
 
 
 
@@ -70,21 +78,18 @@ div#container-linso a {
 /* HEADER __________________________________________________________________________________________________________________________________________________________________________________________ */
 
 
-/* HEADER */
-header {
-    height: var(--Armazem--size-header-height-desktop);
-    perspective: 1000px;
-    position: relative;
-    overflow: visible;
-}
+    /* HEADER */
+
+    header
+    {
+        height: var(--Armazem--size-header-height-desktop);
+        perspective: 1000px;
+        position: relative;
+        overflow: visible;
+    }
 
 
 
-
-
-
-
-/*  TUDO ACIMA DESSA LINHA ESTÁ QUEBRADO  */
 
 
 
@@ -95,16 +100,18 @@ header {
 /* MAIN ____________________________________________________________________________________________________________________________________________________________________________________________ */
 
 
-/* MAIN */
-main {
-    border-top: 2px solid #100000;
-    background: var(--bg-main-gradient-effect-02);
-    perspective: 10px;
-}
+    /* MAIN */
+    main
+    {
+        border-top: 2px solid #100000;
+        background: var(--bg-main-gradient-effect-02);
+        perspective: 10px;
+    }
 
-    main > * {
+    main > *
+    {
         margin-left: max( 2em , 10% );
-        max-width: min( var( --size-max-wdith-content ) , 100% - 3.5em );
+        max-width: min( var( --size-max-width-content ) , 100% - 3.5em );
     }
 
 
@@ -113,11 +120,12 @@ main {
 
 
 
-div.bg-dark {
-    background-color: var(--color-darkest-black-01);
-    background-image: linear-gradient( 180deg, #040408, #000000 );
-    box-shadow: 0em 0.5em 3em var(--color-darkest-black-02);
-}
+    div.bg-dark
+    {
+        background-color: var(--color-darkest-black-01);
+        background-image: linear-gradient( 180deg, #040408, #000000 );
+        box-shadow: 0em 0.5em 3em var(--color-darkest-black-02);
+    }
 
 
 
@@ -125,21 +133,81 @@ div.bg-dark {
 
 
 
-div#apres * {
-    text-align: left;
-}
+    div#apres *
+    {
+        text-align: left;
+    }
 
-div#apres {
-    flex-direction: row;
-    border-top: 2px solid var(--color-medium-black-02);
-    border-bottom: 2px solid var(--color-medium-black-02);
-}
+    div#apres
+    {
+        flex-direction: row;
+        border-top: 2px solid var(--color-medium-black-02);
+        border-bottom: 2px solid var(--color-medium-black-02);
+    }
 
-    div#apres > div {
+    div#apres > div
+    {
         width: 100%;
         max-width: 18.5em;
     }
 
-    div#apres h1 {
+    div#apres h1
+    {
         font-size: 1.85em;
+    }
+
+
+
+
+    /* ### STUDY ### */
+
+    div.study
+    {
+        margin-bottom: 5em;
+    }
+    
+    div.container-study-elements
+    {
+        max-width: var( --size-max-wdith-content );
+        box-shadow: none;
+        flex-direction: column-reverse;
+    }
+
+    div.container-study-elements > div:nth-of-type(2) > div:nth-of-type(2)
+    {
+        background-image: var(--container-study-elements-gradient-effect-02);
+    }
+
+    div.container-study-elements > div:nth-of-type(2)
+    {
+        height: 14em;
+    }
+
+
+
+    /* USE WHICH LINK */
+    div.container-study-elements div:nth-of-type(1) a { display: block; }
+    div.container-study-elements div:nth-of-type(2) a { display: none; }
+
+
+
+
+
+    div.study.two {
+        flex-direction: row;
+        gap: 0.8em;
+    }
+
+    div.study.two > div {
+        background-color: var(--color-darkest-black-02);
+        gap: 0em;
+    }
+
+    div.study.two > div > div {
+        border-radius: 0em;
+    }
+
+    div.study.two > div > div:nth-of-type(2) {
+        border-bottom: 1px solid var(--color-dark-grey-01);
+        height: 10em;
     }

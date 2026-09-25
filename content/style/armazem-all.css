@@ -1,16 +1,9 @@
 
 @charset "UTF-8";
 
+:root
+{
 
-/* LESRO PROJECT: O CSS geral e para telas pequenas do armazem. */
-/* Annotation: Coloque Cogumelos em Coisas! */
-
-
-/* MOBILE DEVICES */
-
-
-
-:root {
     --Armazem--size-header-height-desktop: 80vh;
     --Armazem--size-header-height-desktop-negative: -80vh;
     --Armazem--size-header-height-mobile: 65vh;
@@ -18,9 +11,8 @@
     --Armazem--size-icon-maximized: 6em;
     /* A generic header height variable (falls back to desktop value) used by scripts */
     --Armazem--size-header-height: var(--Armazem--size-header-height-desktop);
+
 }
-
-
 
 
 
@@ -36,69 +28,77 @@
 /* SOCIAL-BAR ____________________________________________________________________________________________________________________________________________________________________ */
 
 
-/* SOCIAL-BAR */
-div#social-bar {
-    width: 100%;
-    position: fixed;
-    top: 2.5em;
-    left: 5%;
-    width: 95%;
-    max-width: 1200px;
-    z-index: 10;
-}
+    /* SOCIAL-BAR */
 
-    div#social-bar * {
+    div#top-page-bar
+    {
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        position: fixed;
+        top: 2.5em;
+        left: 0em;
+        z-index: 10;
+        justify-content: space-between;
+        gap: 3em;
+        padding: 0em 2em;
+    }
+
+    div#top-page-bar *
+    {
         display: flex;
         justify-content: center;
         transition-duration: 0.25s;
     }
 
-div#bg-social-bar {
-    width: 90em;
-    height: var( --size-icons );
-    position: relative; /* allow children to be positioned relative to this box */
-    overflow: visible; /* allow waifu to overflow vertically */
-    margin: auto;
-    padding: 0.5em;
-    justify-content: space-between;
-    background-color: var( --color-darkest-black-02 );
-    box-shadow: 0em 0.5em 1.25em var( --color-darkest-black-03 );
-    border: solid 2px var( --color-medium-grey-02 );
-    border-radius: 1em !important;
-}
+    div#bg-social-bar
+    {
+        max-width: 1200px;
+        width: 90em;
+        height: var( --size-icons );
+        position: relative;
+        overflow: visible;
+        padding: 0.5em;
+        justify-content: space-between;
+    }
 
-    div#bg-social-bar > div * {
+    div#bg-social-bar > div *
+    {
         align-items: center;
     }
 
-/* SOCIAL-BAR -> WAIFU-ICON */
+    /* SOCIAL-BAR -> WAIFU-ICON */
 
-div#first-social-bg-divider {
-    height: 2em;
-    position: relative; /* container for absolutely-positioned waifu */
-    display: flex;
-    align-items: normal;
-    transform: translateX(-1em);
-}
+    div#first-social-bg-divider
+    {
+        height: 2em;
+        position: relative; /* container for absolutely-positioned waifu */
+        display: flex;
+        align-items: normal;
+        transform: translateX(-1em);
+    }
 
-    div#first-social-bg-divider * {
+    div#first-social-bg-divider *
+    {
         align-items: center;
     }
 
-div#container-waifu {
-    position: absolute;
-    left: 0.25em;
-    top: 50%;
-    transform: translateY(-50%);
-    height: calc(var(--size-icons) * 2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto;
-    z-index: 4;
-}
+    div#container-waifu
+    {
+        position: absolute;
+        left: 0.25em;
+        top: 50%;
+        transform: translateY(-50%);
+        height: calc(var(--size-icons) * 2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: auto;
+        z-index: 4;
+    }
 
-    div#container-waifu img {
+    div#container-waifu img
+    {
         width: calc(var(--size-icons) * 1.6);
         height: calc(var(--size-icons) * 1.6);
         border: solid 2px var( --color-light-white-02 );
@@ -108,24 +108,80 @@ div#container-waifu {
         box-shadow: 0 0 0.5em rgba(0,0,0,0.6);
     }
 
-/* ensure notes do not overlap the waifu image */
-div#first-social-bg-divider #container-notes {
-    margin-left: calc(var(--size-icons) * 1.6);
-    align-items: end !important;
-}
+    #container-notes
+    {
+        margin-left: calc(var(--size-icons) * 1.6);
+        align-items: end !important;
+    }
 
-/* SOCIAL-BAR -> SOCIAL-LINKS */
-div#social-bar ul {
-    padding-right: 0.5em;
-}
+    div#container-notes > p
+    {
+        overflow: hidden;
+        height: 0em;
+        text-indent: 1.5em;
+        transform: scale(132%)
+    }
 
-    div#social-bar ul li {
+    /* SOCIAL-BAR -> SOCIAL-LINKS */
+    div#top-page-bar ul
+    {
+        padding-right: 0.5em;
+    }
+
+    div#top-page-bar ul li
+    {
         margin: 0em 0.5em;
     }
 
-        div#social-bar ul li:nth-of-type(even) {
-            color: red;
-        }
+    div#top-page-bar ul li:nth-of-type(1n)
+    {
+        color: red;
+    }
+
+
+    /* ### SETTINGS-LIST ### */
+
+    div#container-burge
+    {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: var( --size-icons );
+    }
+
+    div#container-burge > div:nth-of-type(2)
+    {
+        display: none;
+    }
+
+    div#container-burge > div.icon img
+    {
+        width: 80%;
+        height: 80%;
+    }
+
+    div.show-settings
+    {
+        position: absolute;
+        top: calc( var( --size-icons ) + 2em);
+        right: 0em;
+        display: flex !important;
+        background-color: var( --color-dark-grey-02 );
+        padding: 1em;
+        border: 1px solid var( --color-medium-grey-01 );
+        border-radius: 1em;
+    }
+
+    div.show-settings ul
+    {
+        gap: 0.5em;
+    }
+
+    div#container-burge div.show-settings *
+    {
+        display: flex;
+        flex-direction: column;
+    }
 
 
 
@@ -155,72 +211,62 @@ div#social-bar ul {
 /* HEADER ________________________________________________________________________________________________________________________________________________________________________________ */
 
 
-/* HEADER */
-header {
-    display: block;
-    position: relative;
-    height: var(--Armazem--size-header-height-desktop);
-}
+    header
+    {
+        display: block;
+        position: relative;
+        height: var(--Armazem--size-header-height-desktop);
+    }
 
 
-/* HEADER -> PARALLAX EFFECT _____________________________________________________________________________________________________________________________________________________________ */
+    /* ### PARALLAX EFFECT ### */
 
 
-/* PARALLAX */
-#night-parallax, #parallax-text {
-    will-change: transform;
-    backface-visibility: hidden;
-}
+    #night-parallax, #parallax-text
+    {
+        will-change: transform;
+        backface-visibility: hidden;
+    }
 
-/* PARALLAX WRAPPER */
-#wrap-parallax {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('../../../content/content/img/bg-night.jpg') no-repeat center center fixed;
-    background-size: cover;
-    transform-style: preserve-3d;
-    position: relative;
-    overflow: hidden;
-}
+    #wrap-parallax
+    {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url('../../../content/content/img/bg-night.jpg') no-repeat center center fixed;
+        background-size: cover;
+        transform-style: preserve-3d;
+        position: relative;
+        overflow: hidden;
+    }
 
-/* PARALLAX BACKGROUND */
-#night-parallax {
-    display: none;
-}
+    #night-parallax
+    {
+        display: none;
+    }
 
-/* PARALLAX TEXT */
-#parallax-text {
-    position: relative;
-    color: #b22b2b;
-    font-size: 5rem;
-    font-weight: bolder;
-    z-index: 3;
-}
+    #parallax-text
+    {
+        position: relative;
+        color: #b22b2b;
+        font-size: 5rem;
+        font-weight: bolder;
+        z-index: 3;
+    }
 
-/* SHILD */
-header div:nth-of-type(2) {
-    top: 0em;
-    left: 0em;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: var(--lateral-dark-gradient-effect-01);
-    box-shadow: inset 0em 0em 1.5em var(--color-darkest-black-01), inset 0em 0em 3.5em var(--color-darkest-black-01);
-    z-index: 1;
-}
-
-
-
-
-
-
-
-
-
-/* TUDO ACIMA DESSA LINHA ESTÁ QUEBRADO */
+    #click-shield
+    {
+        top: 0em;
+        left: 0em;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: var(--lateral-dark-gradient-effect-01);
+        box-shadow: inset 0em 0em 1.5em var(--color-darkest-black-01), inset 0em 0em 3.5em var(--color-darkest-black-01);
+        z-index: 1;
+    }
 
 
 
@@ -247,18 +293,14 @@ header div:nth-of-type(2) {
     main > *
     {
         border-radius: 0.75em;
-        box-sizing: border-box;
         width: 100%;
         margin-left: 0em;
         padding: 1em;
     }
 
 
+    /* ### PRESENTATION ### */
 
-
-/* MAIN -> PRESENTATION __________________________________________________________________________________________________________________________________________________________________ */
-
-    /* PRESENTATION */
     div.bg-dark
     {
         width: auto;
@@ -280,37 +322,168 @@ header div:nth-of-type(2) {
         text-indent: 0.4em;
     }
 
-div#apres div, div#apres {
-    color: var(--color-light-grey-02);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
+    div#apres div, div#apres
+    {
+        color: var(--color-light-grey-02);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-div#apres {
-    padding: 3em 1em;
-    gap: 1em;
-}
+    div#apres
+    {
+        padding: 3em 1em;
+        gap: 1em;
+    }
 
-    div#apres > div:nth-of-type(1) {
+    div#apres > div:nth-of-type(1)
+    {
         width: 60%;
     }
 
-    div#apres > div:nth-of-type(2) {
+    div#apres > div:nth-of-type(2)
+    {
         padding: 0.5em;
         gap: 0.5em;
     }
 
-    div#apres img {
+    div#apres img
+    {
         width: 100%;
     }
 
-    div#apres h1 {
+    div#apres h1
+    {
         line-height: 1.1em;
         font-weight: normal;
     }
+
+
+
+
+
+
+
+
+    /* ### STUDY ### */
+
+    div.study
+    {
+        border: 1px solid var( --color-light-black-01 );
+        padding: 0.25em;
+    }
+
+    div.study *
+    {
+        color: var(--color-light-white-02);
+        transition-duration: var(--transition-time-01);
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    div.study h1
+    {
+        font-weight: bolder;
+    }
+    
+    div.container-study-elements
+    {
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+        border-radius: 0.5em;
+        box-shadow: 0em 0em 1.2em var(--color-medium-black-02);
+        border-left: 1.5px solid var(--color-medium-black-03);
+        border-right: 1.5px solid var(--color-medium-black-03);
+    }
+    
+    div.container-study-elements div
+    {
+        width: 100%; height: 100%;
+        position: relative;
+    }
+    
+    div.container-study-elements > div:nth-of-type(1)
+    {
+        box-sizing: border-box;
+        padding: 0.25em 1em;
+        height: 3.5em;
+        background-color: var(--color-darkest-black-03);
+        border-bottom: 1px solid var(--color-medium-black-02);
+    }
+    
+    div.container-study-elements > div:nth-of-type(2)
+    {
+        height: 16em;
+    }
+    
+    .shadow-shield
+    {
+        box-sizing: border-box;
+        padding: 1.5em;
+        position: absolute;
+        bottom: 0em;
+        background-image: var(--container-study-elements-gradient-effect-01);
+        box-shadow: inset 0em 0em 3.5em var(--color-darkest-black-02);
+    }
+    
+    div.container-study-elements img
+    {
+        position: absolute;
+        width: 100%; height: 100%;
+        object-fit: cover;
+    }
+    
+    div.container-study-elements p
+    {
+        font-size: 1em;
+    }
+    
+    div.container-study-elements a
+    {
+        background-color: var(--color-light-black-03);
+        margin: 0.35em;
+        font-size: 1.35em;
+        padding: 0.2em 1em;
+        border: 1.5px solid var(--color-dark-grey-02);
+        border-radius: 0.6em;
+        position: absolute;
+        bottom: 0em; right: 0em;
+    }
+    
+    div.container-study-elements a:hover
+    {
+        background-color: var(--color-light-black-02);
+        box-shadow: inset 0em 0em 0.8em var(--color-darkest-black-01);
+    }
+
+    /* USE WHICH LINK */
+    div.container-study-elements div:nth-of-type(1) a { display: none; }
+    div.container-study-elements div:nth-of-type(2) a { display: block; }
+    div.study.two div.container-study-elements div:nth-of-type(1) a { display: block; }
+    div.study.two div.container-study-elements div:nth-of-type(2) a { display: none; }
+
+
+    div.study.two
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    
+    div.study.two > *
+    {
+    width: 100%;
+    }
+    
+    div.study.two > div > div:nth-of-type(2)
+    {
+    height: 10em;
+    }
+
 
 
 
@@ -323,7 +496,7 @@ div#apres {
 
     div#anime-girl , div#anime-shield
     {
-        margin: auto;
+        margin: 0em;
         position: absolute;
         width: 100%;
         max-width: none;
@@ -341,6 +514,6 @@ div#apres {
 
     div#anime-shield
     {
-        background-color: #000000aa;
+        background-color: #00000040;
         background-size: cover;
     }
