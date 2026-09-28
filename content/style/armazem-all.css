@@ -162,10 +162,13 @@
 
     div.show-settings
     {
+        width: 12em;
+        gap: 0.5em;
         position: absolute;
         top: calc( var( --size-icons ) + 2em);
         right: 0em;
         display: flex !important;
+        flex-direction: column;
         background-color: var( --color-dark-grey-02 );
         padding: 1em;
         border: 1px solid var( --color-medium-grey-01 );
@@ -174,13 +177,21 @@
 
     div.show-settings ul
     {
+        margin-top: 0.5em;
         gap: 0.5em;
     }
 
     div#container-burge div.show-settings *
     {
+        padding: 0em;
+        color: var( --color-dark-white-01 ) !important;
         display: flex;
         flex-direction: column;
+    }
+    div#container-burge div.show-settings h3
+    {
+        color: var( --color-light-grey-01 ) !important;
+        border-bottom: 1px solid var( --color-light-grey-01 );
     }
 
 
@@ -283,6 +294,7 @@
 
     main
     {
+        position: relative;
         transition-duration: 0s;
         min-height: 200vh;
         padding-bottom: 5em;
@@ -472,16 +484,18 @@
         display: flex;
         flex-direction: column;
         gap: 1em;
+        border: none;
     }
     
     div.study.two > *
     {
-    width: 100%;
+        border: 1px solid var( --color-light-black-01 );
+        width: 100%;
     }
     
     div.study.two > div > div:nth-of-type(2)
     {
-    height: 10em;
+        height: 10em;
     }
 
 

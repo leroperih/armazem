@@ -163,8 +163,4 @@ window.addEventListener('resize', () => {
         container_burge_social_links.style.display = "none";
     }
 
-    const footer = document.querySelector("footer");
-
-    footer.innerHTML = `estão consumindo extamente: ${social_bar_consume_percent}% do social-bar`;
-
 });
