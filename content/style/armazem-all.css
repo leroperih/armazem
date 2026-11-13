@@ -38,7 +38,7 @@
         position: fixed;
         top: 2.5em;
         left: 0em;
-        z-index: 10;
+        z-index: 100;
         justify-content: space-between;
         gap: 3em;
         padding: 0em 2em;
